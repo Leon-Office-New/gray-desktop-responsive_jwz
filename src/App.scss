@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .App {
   text-align: center;
 }
@@ -30,4 +32,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  @include yellow-gradient;
+  @include red-gradient;
+}
+
+h1 + p {
+  padding: 40px 20px;
+  color: $light-gray;
+  @include dark-gray-gradient;
 }

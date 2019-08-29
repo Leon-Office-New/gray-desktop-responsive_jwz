@@ -1,0 +1,33 @@
+/// Colors
+$accent-color: #ec0000;
+$secondary-color: yellow;
+
+$white: #fefefe;
+$black: #222;
+
+$gray: #4e4e4e;
+$light-gray: #979797;
+
+$dark-yellow: #ffc500;
+
+/// Gradients
+@mixin vertical-gradient($from, $to) {
+  background: linear-gradient($from, $to);
+}
+@mixin horizontal-gradient($from, $to) {
+  background: linear-gradient(to right, $from, $to);
+}
+
+@mixin yellow-gradient {
+  @include vertical-gradient(#ffe300, #ffb400);
+}
+@mixin red-gradient {
+  @include horizontal-gradient(#bc0000, #ff0000);
+}
+@mixin dark-gray-gradient {
+  @include vertical-gradient($gray, #191919);
+}
+// background: linear-gradient(#e66465, #9198e5);
+
+/// Font
+$fz: 1rem;

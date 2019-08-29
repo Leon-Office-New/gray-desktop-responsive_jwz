@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route, Link } from 'react-router-dom';
-import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import './App.scss';
 
@@ -11,7 +10,6 @@ const Home = () => {
   return (
     <div>
       <Link to="/account">to Account</Link>
-      {/* <button onClick={() => push('/account')}>Push new path</button> */}
     </div>
   );
 };
@@ -25,8 +23,6 @@ const Account = () => {
 };
 class App extends Component {
   onHandleClick = event => {
-    console.log(event, this.props.doPush);
-    this.props.doPush('/account');
     this.props.defaultAction(Math.random());
   };
 
@@ -38,6 +34,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
         </Switch>
         <h1>App #{this.props.count}</h1>
+        <p>Some text</p>
         <p>
           <button onClick={this.onHandleClick}>Push Account to router</button>
         </p>
@@ -53,8 +50,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      defaultAction,
-      doPush: () => push('/account')
+      defaultAction
     },
     dispatch
   );

@@ -5,6 +5,7 @@ import { configureStore } from './store';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
+import '@csstools/normalize.css';
 import './index.scss';
 
 const store = configureStore();
