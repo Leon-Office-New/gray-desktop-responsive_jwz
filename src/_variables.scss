@@ -3,7 +3,7 @@ $accent-color: #ec0000;
 $secondary-color: yellow;
 
 $white: #fefefe;
-$black: #222;
+$black: #191919;
 
 $gray: #4e4e4e;
 $light-gray: #979797;
@@ -21,11 +21,17 @@ $dark-yellow: #ffc500;
 @mixin yellow-gradient {
   @include vertical-gradient(#ffe300, #ffb400);
 }
+@mixin yellow-gradient-reverse {
+  @include vertical-gradient(#ffb400, #ffe300);
+}
 @mixin red-gradient {
   @include horizontal-gradient(#bc0000, #ff0000);
 }
+@mixin red-gradient-reverse {
+  @include horizontal-gradient(#ff0000, #bc0000);
+}
 @mixin dark-gray-gradient {
-  @include vertical-gradient($gray, #191919);
+  @include vertical-gradient($gray, $black);
 }
 // background: linear-gradient(#e66465, #9198e5);
 
