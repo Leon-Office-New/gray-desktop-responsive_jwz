@@ -1,0 +1,30 @@
+{
+  "header": {
+    "menu": [
+      {
+        "text": "ספורט",
+        "path": "/"
+      },
+      {
+        "text": "קזינו",
+        "path": "/casino"
+      },
+      {
+        "text": "קזינו חי",
+        "path": "/live-casino"
+      },
+      {
+        "text": "פוקר",
+        "path": "/poker"
+      },
+      {
+        "text": "הגרלה",
+        "path": "/lottery"
+      },
+      {
+        "text": "סיכוי",
+        "path": "/chance"
+      }
+    ]
+  }
+}

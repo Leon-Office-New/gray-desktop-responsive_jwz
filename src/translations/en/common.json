@@ -1,0 +1,30 @@
+{
+  "header": {
+    "menu": [
+      {
+        "text": "SPORT",
+        "path": "/"
+      },
+      {
+        "text": "CASINO",
+        "path": "/casino"
+      },
+      {
+        "text": "LIVE CASION",
+        "path": "/live-casino"
+      },
+      {
+        "text": "POKER",
+        "path": "/poker"
+      },
+      {
+        "text": "LOTTERY",
+        "path": "/lottery"
+      },
+      {
+        "text": "CHANCE",
+        "path": "/chance"
+      }
+    ]
+  }
+}
