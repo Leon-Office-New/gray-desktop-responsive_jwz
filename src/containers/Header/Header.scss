@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.header {
+  height: 56px;
+  @include dark-gray-gradient;
+
+  .content {
+    height: 100%;
+
+    .logo {
+      margin-left: 40px;
+    }
+  }
+}

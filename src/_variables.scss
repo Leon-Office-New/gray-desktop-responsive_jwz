@@ -36,5 +36,7 @@ $green: #037b33;
 }
 // background: linear-gradient(#e66465, #9198e5);
 
-/// Font
-$fz: 1rem;
+/// Helpers
+@mixin transition($speed: 300ms) {
+  transition: all $speed ease-in-out;
+}

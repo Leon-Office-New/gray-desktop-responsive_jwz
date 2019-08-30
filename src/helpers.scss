@@ -1,0 +1,14 @@
+@import './variables';
+
+.container {
+  max-width: 1370px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: var(--direction);
+  align-items: center;
+}
