@@ -10,6 +10,7 @@ const Header = () => {
         <div className="flex content">
           <Logo />
           <HeaderMenu />
+          <i className="fas fa-sort-down"></i>
         </div>
       </div>
     </header>
