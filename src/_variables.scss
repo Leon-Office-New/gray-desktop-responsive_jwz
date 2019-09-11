@@ -34,11 +34,11 @@ $bor-rad: 2px;
 @mixin yellow-gradient-reverse {
   @include vertical-gradient(#ffb400, #ffe300);
 }
-@mixin red-gradient {
-  @include horizontal-gradient(#bc0000, #ff0000);
-}
 @mixin red-gradient-reverse {
-  @include horizontal-gradient(#ff0000, #bc0000);
+  @include vertical-gradient(#bc0000, #ff0000);
+}
+@mixin red-gradient {
+  @include vertical-gradient(#ff0000, #bc0000);
 }
 @mixin dark-gray-gradient {
   @include vertical-gradient($gray, $black);

@@ -82,6 +82,7 @@
       &:hover {
         .dropdown {
           display: block;
+          z-index: 10;
         }
       }
     }

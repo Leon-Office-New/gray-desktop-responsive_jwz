@@ -8,9 +8,10 @@
   }
 
   .aside-arrow {
-    margin: 0 $dist-middle;
+    margin: 0 $dist-big;
     @include transition();
     cursor: pointer;
+    z-index: 5;
 
     &:hover {
       color: $accent-color;

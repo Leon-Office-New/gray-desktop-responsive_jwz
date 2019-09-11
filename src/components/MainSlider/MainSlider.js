@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Carousel from 'nuka-carousel';
-
+import SlideMatchResult from './SlideMatchResult';
 import './MainSlider.scss';
 
 const MainSlider = props => {
+  const slides = [<SlideMatchResult />];
   const [slide, setSlide] = useState(0);
   const autoplayInterval = 5000;
-  const SLIDES_COUNT = 4;
+  const SLIDES_COUNT = slides.length;
 
   const onPrevClick = () => {
     if (slide - 1 === -1) {
@@ -36,23 +37,24 @@ const MainSlider = props => {
   return (
     <div className="main-slider">
       <Carousel
+        dragging={false}
         autoplay={true}
         autoplayInterval={autoplayInterval}
         renderCenterLeftControls={() => (
           <i
             className="fas fa-chevron-left aside-arrow"
             onClick={onPrevClick}
-          ></i>
+          />
         )}
         renderCenterRightControls={() => (
           <i
             className="fas fa-chevron-right aside-arrow"
             onClick={onNextClick}
-          ></i>
+          />
         )}
         renderBottomCenterControls={() => (
           <ul className="bottom-dots">
-            {[1, 2, 3, 4].map((item, index) => (
+            {slides.map((item, index) => (
               <li
                 key={index}
                 style={{
@@ -67,22 +69,8 @@ const MainSlider = props => {
         afterSlide={afterSlide}
         height={'100%'}
       >
-        {[1, 2, 3, 4].map((item, index) => {
-          return (
-            <div
-              key={index}
-              style={{
-                height: '380px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: 'orangered',
-                color: 'black'
-              }}
-            >
-              <h3>{item}</h3>
-            </div>
-          );
+        {slides.map(item => {
+          return item;
         })}
       </Carousel>
     </div>
