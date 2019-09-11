@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Carousel from 'nuka-carousel';
 import SlideMatchResult from './SlideMatchResult';
+import SlideVersus from './SlideVersus';
 import './MainSlider.scss';
 
 const MainSlider = props => {
-  const slides = [<SlideMatchResult />];
+  const slides = [<SlideVersus />];
   const [slide, setSlide] = useState(0);
   const autoplayInterval = 5000;
   const SLIDES_COUNT = slides.length;
