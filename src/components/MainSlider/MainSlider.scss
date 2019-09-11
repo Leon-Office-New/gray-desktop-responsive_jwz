@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.main-slider {
+  height: 380px;
+
+  i {
+    font-size: 1.5em;
+  }
+
+  .aside-arrow {
+    margin: 0 $dist-middle;
+    @include transition();
+    cursor: pointer;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  .bottom-dots {
+    display: flex;
+    li {
+      width: $dist-middle;
+      height: $dist-middle;
+      border-radius: 50%;
+      @include transition();
+      border: 1px solid;
+      cursor: pointer;
+      margin: $dist-middle $dist-low;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+}
