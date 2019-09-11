@@ -21,16 +21,6 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
         </Switch>
-        <p>{`Count: ${this.props.count}`}</p>
-        <p>
-          <button onClick={() => this.props.defaultAction(Math.random())}>
-            {this.props.isLoading ? (
-              <i className="fas fa-spinner"></i>
-            ) : (
-              'Click me!'
-            )}
-          </button>
-        </p>
       </div>
     );
   }

@@ -12,3 +12,10 @@
   flex-direction: var(--direction);
   align-items: center;
 }
+
+.accent {
+  color: $accent-color;
+}
+.secondary {
+  color: $secondary-color;
+}

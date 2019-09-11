@@ -1,0 +1,109 @@
+@import '../../variables';
+
+.logged-nav {
+  height: 100%;
+
+  .info {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .user {
+      height: 100%;
+    }
+
+    .balance {
+      margin: 0 $dist-very-big;
+
+      .sum {
+        padding-right: $dist-low;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+
+      i {
+        padding-bottom: $dist-low;
+      }
+
+      .nickname {
+        padding-left: $dist-middle;
+      }
+
+      .avatar {
+        display: inline-block;
+        margin-left: $dist-low;
+        width: 20px;
+        max-height: 20px;
+        border-radius: 50%;
+      }
+
+      position: relative;
+      .dropdown {
+        display: none;
+        position: absolute;
+        width: 240px;
+        @include dark-gray-gradient;
+        top: 90%;
+        left: -125%;
+        border-radius: $bor-rad;
+        padding: $dist-middle $dist-big;
+
+        &-menu {
+          position: relative;
+          text-align: right;
+
+          a {
+            display: inline-block;
+            padding: $dist-low 0;
+            @include transition();
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            top: -16px;
+            right: 12px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 4px 8px 4px;
+            border-color: transparent transparent $gray transparent;
+          }
+        }
+      }
+
+      &:hover {
+        .dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .button {
+    padding: 3px 8px;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    border: 1px solid;
+    border-radius: $bor-rad;
+    @include transition();
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+      border-color: $white;
+    }
+
+    i {
+      padding-left: $dist-low;
+    }
+  }
+}

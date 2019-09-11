@@ -1,7 +1,4 @@
 /// Colors
-$accent-color: #ec0000;
-$secondary-color: yellow;
-
 $white: #fefefe;
 $black: #191919;
 
@@ -10,6 +7,18 @@ $light-gray: #979797;
 
 $dark-yellow: #ffc500;
 $green: #037b33;
+
+$accent-color: #ec0000;
+$secondary-color: $dark-yellow;
+
+/// Distance
+$dist-low: 4px;
+$dist-middle: 8px;
+$dist-big: 16px;
+$dist-very-big: 32px;
+
+/// Borders
+$bor-rad: 2px;
 
 /// Gradients
 @mixin vertical-gradient($from, $to) {

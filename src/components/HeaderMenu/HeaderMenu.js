@@ -1,25 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
-
+import SemanticMenu from '../SemanticMenu';
 import './HeaderMenu.scss';
 
 const HeaderMenu = ({ t }) => {
   const links = t('header', { returnObjects: true }).menu;
 
-  return (
-    <nav className="nav">
-      <ul>
-        {links.map(item => {
-          return (
-            <li key={item.path}>
-              <Link to={item.path}>{item.text}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-  );
+  return <SemanticMenu className="nav" links={links} />;
 };
 
 export default withTranslation()(HeaderMenu);

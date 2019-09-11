@@ -5,10 +5,15 @@
   @include dark-gray-gradient;
 
   .content {
+    padding: 0 $dist-very-big;
     height: 100%;
 
     .logo {
       margin-left: 40px;
+    }
+
+    .logged-nav {
+      margin-right: auto;
     }
   }
 }

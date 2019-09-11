@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../../components/Logo';
 import HeaderMenu from '../../components/HeaderMenu';
+import LoggedNav from '../../components/LoggedNav';
 import './Header.scss';
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
         <div className="flex content">
           <Logo />
           <HeaderMenu />
-          <i className="fas fa-sort-down"></i>
+          <LoggedNav />
         </div>
       </div>
     </header>

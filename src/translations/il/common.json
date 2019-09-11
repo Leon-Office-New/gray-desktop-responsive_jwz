@@ -25,6 +25,24 @@
         "text": "סיכוי",
         "path": "/chance"
       }
-    ]
+    ],
+    "loggedNav": {
+      "disconnectButton": "התנתק",
+      "balance": "יתרה",
+      "dropdown": [
+        {
+          "text": "ניהול",
+          "path": "/"
+        },
+        {
+          "text": "סוכנים",
+          "path": "/"
+        },
+        {
+          "text": "החשבון",
+          "path": "/"
+        }
+      ]
+    }
   }
 }
