@@ -98,5 +98,9 @@
   "featuredMatches": {
     "header": "מוצעים משחקים",
     "button": "בטח עכשיו"
+  },
+  "fastBet": {
+    "text": "מי ינצח במשחק",
+    "button": "בטח עכשיו"
   }
 }

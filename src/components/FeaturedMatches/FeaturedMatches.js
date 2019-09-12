@@ -43,7 +43,7 @@ const FeaturedMatches = props => {
 
   let matches = [];
   for (let i = 0; i < 11; i++) {
-    matches.push(<FeaturedMatch buttonText={text.button} />);
+    matches.push(<FeaturedMatch key={i} buttonText={text.button} />);
   }
 
   let count = 0;
@@ -93,8 +93,12 @@ const FeaturedMatches = props => {
         slideIndex={slide}
         height={'100%'}
       >
-        {slides.map(item => {
-          return <div className="flex matches-list">{item}</div>;
+        {slides.map((item, index) => {
+          return (
+            <div key={index} className="flex matches-list">
+              {item}
+            </div>
+          );
         })}
       </Carousel>
     </section>

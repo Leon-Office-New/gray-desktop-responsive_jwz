@@ -1,6 +1,7 @@
 @import '../../variables';
 
 .featured-matches {
+  border-radius: $bor-rad;
   @include dark-gray-gradient();
 
   h2 {
@@ -57,7 +58,7 @@
         color: $black;
 
         img {
-          max-height: 75%;
+          width: 100%;
         }
 
         .date {

@@ -1,5 +1,16 @@
 @import '../../variables';
 
 .home-page {
-  // padding: 50px;
+  .with-aside {
+    margin-top: $dist-very-big;
+    justify-content: space-between;
+    align-items: stretch;
+
+    aside {
+      width: 370px;
+    }
+    main {
+      width: 970px;
+    }
+  }
 }

@@ -1,0 +1,50 @@
+@import '../../variables';
+
+.fast-bet {
+  height: 300px;
+  padding: $dist-middle;
+  @include dark-gray-gradient();
+  border-radius: $bor-rad;
+  text-align: right;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    padding: 0 $dist-middle;
+    box-shadow: inset -133px 0px 50px 0px rgba(0, 0, 0, 0.9);
+    background-image: url(../../images/messy.png);
+    background-size: cover;
+
+    font-size: 1.3em;
+
+    .text {
+      font-size: 1.3em;
+      max-width: 100px;
+    }
+
+    .team {
+      span {
+        display: inline-block;
+        background-color: $accent-color;
+        margin-top: $dist-low;
+        padding: $dist-low $dist-middle;
+        border-radius: $bor-rad;
+      }
+    }
+
+    button {
+      @include yellow-gradient();
+      font-size: 0.9em;
+      padding: $dist-middle $dist-very-big;
+      border-radius: $bor-rad;
+      @include transition();
+
+      &:hover {
+        box-shadow: 0 0 8px 4px darken($secondary-color, 5%) inset;
+      }
+    }
+  }
+}
