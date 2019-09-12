@@ -52,7 +52,7 @@ $bor-rad: 2px;
 @mixin section-header($color: $white, $dist: $dist-big) {
   position: relative;
   padding: $dist 0;
-  margin: $dist 0;
+  margin-bottom: $dist;
   text-align: center;
 
   &::after {

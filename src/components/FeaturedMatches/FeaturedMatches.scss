@@ -4,6 +4,7 @@
   @include dark-gray-gradient();
 
   h2 {
+    margin-top: 0;
     font-weight: normal;
     @include section-header($light-gray);
 

@@ -79,15 +79,9 @@ const FeaturedMatches = props => {
     <section className="featured-matches">
       <h2>
         <div className="controls">
-          <i
-            className="fas fa-chevron-left aside-arrow"
-            onClick={onPrevClick}
-          />
+          <i className="fas fa-chevron-left" onClick={onPrevClick} />
           <span>{`${slide + 1} / ${SLIDES_COUNT}`}</span>
-          <i
-            className="fas fa-chevron-right aside-arrow"
-            onClick={onNextClick}
-          />
+          <i className="fas fa-chevron-right" onClick={onNextClick} />
         </div>
         {text.header}
       </h2>

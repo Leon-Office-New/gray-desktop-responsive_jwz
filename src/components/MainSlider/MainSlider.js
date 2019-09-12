@@ -36,7 +36,7 @@ const MainSlider = props => {
   };
 
   return (
-    <div className="main-slider">
+    <section className="main-slider">
       <Carousel
         dragging={false}
         autoplay={true}
@@ -74,7 +74,7 @@ const MainSlider = props => {
           return item;
         })}
       </Carousel>
-    </div>
+    </section>
   );
 };
 
