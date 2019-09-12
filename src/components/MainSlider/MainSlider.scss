@@ -27,7 +27,7 @@
       @include transition();
       border: 1px solid;
       cursor: pointer;
-      margin: $dist-middle $dist-low;
+      margin: $dist-big $dist-low;
 
       &:hover {
         background-color: $white;
