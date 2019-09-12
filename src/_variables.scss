@@ -20,6 +20,9 @@ $dist-very-big: 32px;
 /// Borders
 $bor-rad: 2px;
 
+/// Shadows
+$little-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.53);
+
 /// Gradients
 @mixin vertical-gradient($from, $to) {
   background: linear-gradient($from, $to);

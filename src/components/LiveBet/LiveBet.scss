@@ -1,0 +1,76 @@
+@import '../../variables';
+
+.live-bet {
+  @include dark-gray-gradient;
+  border-radius: $bor-rad;
+  padding: $dist-middle;
+
+  .league {
+    position: relative;
+    width: 80%;
+    height: 50px;
+    background-color: $secondary-color;
+    color: $black;
+    padding: $dist-middle;
+    margin-right: -$dist-middle;
+    margin-left: auto;
+
+    font-size: 1.2em;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0px 0px 50px 20px;
+      border-color: transparent transparent $secondary-color transparent;
+      position: absolute;
+      top: 0;
+      left: -20px;
+    }
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 20px 0px 0px;
+      border-color: $secondary-color transparent transparent transparent;
+      position: absolute;
+      top: 0;
+      right: -20px;
+    }
+
+    img {
+      margin-left: $dist-middle;
+    }
+  }
+
+  .video {
+    position: relative;
+    margin: $dist-big 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 264px;
+    background-image: url(../../images/live-match.png);
+    background-size: cover;
+
+    .time {
+      position: absolute;
+      top: $dist-low;
+      font-size: 1.2em;
+      font-weight: bolder;
+      // color: $black;
+    }
+
+    .live {
+      position: absolute;
+      top: $dist-low;
+      right: $dist-middle;
+      // font-size: 1.2em;
+      background-color: $accent-color;
+      padding: $dist-low $dist-big;
+    }
+  }
+}

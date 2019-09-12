@@ -1,0 +1,9 @@
+@import '../../variables';
+
+.footer {
+  height: 40px;
+  padding-top: 11px;
+  margin-top: 96px;
+  @include vertical-gradient(darken($gray, 15%), black);
+  text-align: center;
+}

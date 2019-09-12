@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import Header from './containers/Header';
 import HomePage from './containers/HomePage';
+import Footer from './containers/Footer';
 import './App.scss';
 
 import { defaultAction } from './redux/default_reducer';
@@ -21,6 +22,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
         </Switch>
+        <Footer />
       </div>
     );
   }

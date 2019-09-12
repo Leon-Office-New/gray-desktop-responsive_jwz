@@ -3,6 +3,7 @@ import MainSlider from '../../components/MainSlider';
 import SportsMenu from '../../components/SportsMenu';
 import FeaturedMatches from '../../components/FeaturedMatches';
 import FastBet from '../../components/FastBet';
+import LiveBet from '../../components/LiveBet';
 import './HomePage.scss';
 
 export class HomePage extends Component {
@@ -15,6 +16,7 @@ export class HomePage extends Component {
           <div className="flex with-aside">
             <aside>
               <FastBet />
+              <LiveBet />
             </aside>
             <main>
               <FeaturedMatches />
