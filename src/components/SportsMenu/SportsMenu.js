@@ -31,7 +31,7 @@ const SportsMenu = ({ t }) => {
   const links = t('sportsNav', { returnObjects: true });
 
   return (
-    <div className="sports-nav">
+    <section className="sports-nav">
       <nav>
         <ul className="flex">
           {links.map((item, index) => {
@@ -46,7 +46,7 @@ const SportsMenu = ({ t }) => {
           })}
         </ul>
       </nav>
-    </div>
+    </section>
   );
 };
 

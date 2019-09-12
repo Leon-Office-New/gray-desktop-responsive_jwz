@@ -5,7 +5,7 @@ import SlideVersus from './SlideVersus';
 import './MainSlider.scss';
 
 const MainSlider = props => {
-  const slides = [<SlideMatchResult />, <SlideVersus />];
+  const slides = [<SlideVersus />, <SlideMatchResult />];
   const [slide, setSlide] = useState(0);
   const autoplayInterval = 5000;
   const SLIDES_COUNT = slides.length;

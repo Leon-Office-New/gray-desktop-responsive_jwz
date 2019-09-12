@@ -94,5 +94,9 @@
       "text": "הוקי",
       "path": "/"
     }
-  ]
+  ],
+  "featuredMatches": {
+    "header": "מוצעים משחקים",
+    "button": "בטח עכשיו"
+  }
 }

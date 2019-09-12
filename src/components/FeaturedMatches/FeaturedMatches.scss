@@ -1,0 +1,117 @@
+@import '../../variables';
+
+.featured-matches {
+  @include dark-gray-gradient();
+
+  h2 {
+    font-weight: normal;
+    @include section-header($light-gray);
+
+    .controls {
+      position: absolute;
+      top: 24px;
+      left: $dist-very-big;
+      font-size: 0.7em;
+
+      span {
+        display: inline-block;
+        padding: 0 $dist-big;
+      }
+
+      i {
+        color: $secondary-color;
+        @include transition();
+        cursor: pointer;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
+  .matches-list {
+    // justify-content: space-between;
+    padding: 0 $dist-big $dist-big $dist-big;
+
+    .featured-match {
+      align-items: stretch;
+      height: 132px;
+      flex-basis: 32%;
+      background-color: $gray;
+
+      &:not(:last-child) {
+        margin-left: 2%;
+      }
+
+      .league {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: $dist-middle;
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        @include yellow-gradient();
+        color: $black;
+
+        img {
+          max-height: 75%;
+        }
+
+        .date {
+          margin-top: auto;
+          margin-bottom: $dist-low;
+        }
+        .time {
+          margin-bottom: auto;
+        }
+      }
+
+      .info {
+        width: 80%;
+        padding: $dist-big;
+        // background-image: url(../../images/pix-champion.png);
+        // background-repeat: no-repeat;
+        // background-size: 110%;
+        // background-position: 300% -30%;
+
+        .teams {
+          .team {
+            margin-bottom: $dist-low;
+
+            img {
+              height: 24px;
+              width: 24px;
+              margin-left: $dist-low;
+            }
+
+            .odd {
+              margin-right: auto;
+              color: $secondary-color;
+            }
+          }
+        }
+
+        .button {
+          justify-content: center;
+          margin-top: $dist-big;
+
+          button {
+            width: 128px;
+            height: 32px;
+            @include red-gradient();
+            color: $white;
+            font-size: 1.1em;
+            @include transition();
+            box-shadow: none;
+
+            &:hover {
+              box-shadow: 0 0 8px 4px darken($accent-color, 5%) inset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
