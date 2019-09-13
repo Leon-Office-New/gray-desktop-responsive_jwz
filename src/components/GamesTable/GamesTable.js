@@ -6,11 +6,74 @@ import j_logo from '../../images/juventus.png';
 
 import './GamesTable.scss';
 
-const Game = props => {
-  return <div className="flex game">game</div>;
+const TableHeader = props => {
+  return (
+    <div className="flex table-header">
+      <div className="col time">Time</div>
+      <div className="col game">Game</div>
+      <div className="col market">
+        <div className="name">Match Result</div>
+        <div className="types">
+          <div className="type">1</div>
+          <div className="type">X</div>
+          <div className="type">2</div>
+        </div>
+      </div>
+      <div className="col market">
+        <div className="name">Total Score</div>
+        <div className="types">
+          <div className="type">Over 2.5</div>
+          <div className="type">Under 2.5</div>
+        </div>
+      </div>
+      <div className="col market">
+        <div className="name">Handicap 3 Way</div>
+        <div className="types">
+          <div className="type">1</div>
+          <div className="type">X</div>
+          <div className="type">2</div>
+        </div>
+      </div>
+      <div className="col empty"></div>
+    </div>
+  );
 };
 
-const GamesTable = ({ t }) => {
+const Game = props => {
+  return (
+    <div className="flex game">
+      <div className="col time">15’</div>
+      <div className="col teams">
+        <div className="team">
+          <span className="name">Manchester United</span>
+          <img src={m_logo} alt="team_logo" />
+        </div>
+        <div className="score">2:0</div>
+        <div className="team">
+          <img src={j_logo} alt="team_logo" />
+          <span className="name">Juventus</span>
+        </div>
+      </div>
+      <div className="col odds">
+        <div className="item more">1.89</div>
+        <div className="item more">1.89</div>
+        <div className="item less">1.89</div>
+      </div>
+      <div className="col odds">
+        <div className="item more">1.89</div>
+        <div className="item less">1.89</div>
+      </div>
+      <div className="col odds">
+        <div className="item more">1.89</div>
+        <div className="item more">1.89</div>
+        <div className="item less">1.89</div>
+      </div>
+      <div className="col last">+418</div>
+    </div>
+  );
+};
+
+const GamesTable = ({ t, header, live }) => {
   const sports = t('sportsNav', { returnObjects: true });
   const [sport, setSport] = useState(0);
   const sportsPerLine = 7;
@@ -62,7 +125,8 @@ const GamesTable = ({ t }) => {
             <i className="fas fa-chevron-right" onClick={onNextClick} />
           </div>
         )}
-        {'text.header'}
+        {header}
+        {live && <div className="live">LIVE</div>}
       </h2>
 
       <div className="flex sports-list">
@@ -84,8 +148,13 @@ const GamesTable = ({ t }) => {
           );
         })}
         {sports.length > sportsPerLine && (
-          <div className="more-sports">
-            <div className={sport < sportsPerLine ? 'list' : 'list active'}>
+          <div
+            className={
+              sport < sportsPerLine ? 'more-sports' : 'more-sports active'
+            }
+          >
+            <div>+{sports.length - sportsPerLine}</div>
+            <div className="list">
               {sports.map((item, index) => {
                 if (index < sportsPerLine) {
                   return null;
@@ -108,23 +177,26 @@ const GamesTable = ({ t }) => {
         )}
       </div>
 
-      <Carousel
-        dragging={false}
-        vertical={true}
-        renderCenterLeftControls={null}
-        renderCenterRightControls={null}
-        renderBottomCenterControls={null}
-        slideIndex={slide}
-        height={'100%'}
-      >
-        {slides.map((item, index) => {
-          return (
-            <div key={index} className="games-list">
-              {item}
-            </div>
-          );
-        })}
-      </Carousel>
+      <div className="table">
+        <TableHeader />
+        <Carousel
+          dragging={false}
+          vertical={true}
+          renderCenterLeftControls={null}
+          renderCenterRightControls={null}
+          renderBottomCenterControls={null}
+          slideIndex={slide}
+          height={'100%'}
+        >
+          {slides.map((item, index) => {
+            return (
+              <div key={index} className="games-list">
+                {item}
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
     </section>
   );
 };

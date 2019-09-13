@@ -26,7 +26,9 @@ export class HomePage extends Component {
             </aside>
             <main>
               <FeaturedMatches />
-              <GamesTable />
+              <GamesTable header="משחקים מובילים בהפעלה" live={true} />
+              <GamesTable header="משחקים פופולריים" live={false} />
+              <GamesTable header="המשחקים הבאים" live={false} />
             </main>
           </div>
         </div>
