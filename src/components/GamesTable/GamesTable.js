@@ -9,29 +9,29 @@ import './GamesTable.scss';
 const TableHeader = props => {
   return (
     <div className="flex table-header">
-      <div className="col time">Time</div>
-      <div className="col game">Game</div>
+      <div className="col time">זמן</div>
+      <div className="col game">משחק</div>
       <div className="col market">
-        <div className="name">Match Result</div>
+        <div className="name">3 דרך</div>
         <div className="types">
-          <div className="type">1</div>
-          <div className="type">X</div>
           <div className="type">2</div>
+          <div className="type">X</div>
+          <div className="type">1</div>
         </div>
       </div>
       <div className="col market">
-        <div className="name">Total Score</div>
+        <div className="name">סך הכל</div>
         <div className="types">
-          <div className="type">Over 2.5</div>
-          <div className="type">Under 2.5</div>
+          <div className="type">תחת 2.5</div>
+          <div className="type">על 2.5</div>
         </div>
       </div>
       <div className="col market">
-        <div className="name">Handicap 3 Way</div>
+        <div className="name">יעד הבא</div>
         <div className="types">
-          <div className="type">1</div>
-          <div className="type">X</div>
           <div className="type">2</div>
+          <div className="type">X</div>
+          <div className="type">1</div>
         </div>
       </div>
       <div className="col empty"></div>
@@ -73,7 +73,8 @@ const Game = props => {
   );
 };
 
-const GamesTable = ({ t, header, live }) => {
+const GamesTable = props => {
+  const { t, header, live } = props;
   const sports = t('sportsNav', { returnObjects: true });
   const [sport, setSport] = useState(0);
   const sportsPerLine = 7;
