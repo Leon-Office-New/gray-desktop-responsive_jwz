@@ -1,0 +1,67 @@
+@import '../../variables';
+
+.casino-games {
+  @include dark-gray-gradient;
+  border-radius: $bor-rad;
+
+  h2 {
+    @include section-header;
+    font-weight: normal;
+  }
+
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .name {
+      font-size: 1.2em;
+      margin: $dist-big;
+    }
+
+    .block {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 300px;
+      }
+
+      .hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        left: 0;
+
+        @include transition;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        padding-bottom: $dist-very-big;
+        box-shadow: inset 0px -80px 50px 0px rgba(0, 0, 0, 0.9);
+
+        button {
+          @include yellow-gradient();
+          font-size: 0.9em;
+          padding: $dist-middle $dist-very-big;
+          border-radius: $bor-rad;
+          @include transition();
+
+          &:hover {
+            box-shadow: 0 0 8px 4px darken($secondary-color, 5%) inset;
+          }
+        }
+      }
+
+      &:hover {
+        .hover {
+          top: 0;
+        }
+      }
+    }
+  }
+}

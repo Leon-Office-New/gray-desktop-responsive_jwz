@@ -4,6 +4,7 @@ import SportsMenu from '../../components/SportsMenu';
 import FeaturedMatches from '../../components/FeaturedMatches';
 import FastBet from '../../components/FastBet';
 import LiveBet from '../../components/LiveBet';
+import CasinoGames from '../../components/CasinoGames';
 import './HomePage.scss';
 
 export class HomePage extends Component {
@@ -17,6 +18,7 @@ export class HomePage extends Component {
             <aside>
               <FastBet />
               <LiveBet />
+              <CasinoGames />
             </aside>
             <main>
               <FeaturedMatches />
