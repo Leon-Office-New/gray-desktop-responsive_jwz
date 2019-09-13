@@ -16,6 +16,10 @@
     }
     main {
       width: 970px;
+
+      .games-table {
+        margin-top: $dist-very-big;
+      }
     }
   }
 }

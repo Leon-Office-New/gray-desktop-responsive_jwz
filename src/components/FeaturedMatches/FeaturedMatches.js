@@ -42,7 +42,7 @@ const FeaturedMatches = props => {
   const perSlide = 3;
 
   let matches = [];
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < 8; i++) {
     matches.push(<FeaturedMatch key={i} buttonText={text.button} />);
   }
 
@@ -78,11 +78,13 @@ const FeaturedMatches = props => {
   return (
     <section className="featured-matches">
       <h2>
-        <div className="controls">
-          <i className="fas fa-chevron-left" onClick={onPrevClick} />
-          <span>{`${slide + 1} / ${SLIDES_COUNT}`}</span>
-          <i className="fas fa-chevron-right" onClick={onNextClick} />
-        </div>
+        {SLIDES_COUNT > 1 && (
+          <div className="controls">
+            <i className="fas fa-chevron-left" onClick={onPrevClick} />
+            <span>{`${slide + 1} / ${SLIDES_COUNT}`}</span>
+            <i className="fas fa-chevron-right" onClick={onNextClick} />
+          </div>
+        )}
         {text.header}
       </h2>
       <Carousel

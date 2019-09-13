@@ -43,6 +43,7 @@ const MainSlider = props => {
       <Carousel
         dragging={false}
         autoplay={true}
+        pauseOnHover={true}
         autoplayInterval={autoplayInterval}
         renderCenterLeftControls={() => (
           <i

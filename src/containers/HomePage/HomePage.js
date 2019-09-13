@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import MainSlider from '../../components/MainSlider';
 import SportsMenu from '../../components/SportsMenu';
+
 import FeaturedMatches from '../../components/FeaturedMatches';
+import GamesTable from '../../components/GamesTable';
+
 import FastBet from '../../components/FastBet';
 import LiveBet from '../../components/LiveBet';
 import CasinoGames from '../../components/CasinoGames';
+
 import './HomePage.scss';
 
 export class HomePage extends Component {
@@ -22,6 +26,7 @@ export class HomePage extends Component {
             </aside>
             <main>
               <FeaturedMatches />
+              <GamesTable />
             </main>
           </div>
         </div>

@@ -1,0 +1,34 @@
+@import '../../variables';
+
+.games-table {
+  @include dark-gray-gradient;
+  border-radius: $bor-rad;
+
+  h2 {
+    margin-top: 0;
+    font-weight: normal;
+    @include section-header($light-gray);
+
+    .controls {
+      position: absolute;
+      top: 24px;
+      left: $dist-very-big;
+      font-size: 0.7em;
+
+      span {
+        display: inline-block;
+        padding: 0 $dist-big;
+      }
+
+      i {
+        color: $secondary-color;
+        @include transition();
+        cursor: pointer;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}

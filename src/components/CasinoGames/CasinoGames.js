@@ -3,7 +3,7 @@ import { withTranslation } from 'react-i18next';
 import './CasinoGames.scss';
 
 import blackjack from '../../images/blackjack.svg';
-import roulette from '../../images/roulette.svg';
+import roulette from '../../images/auto-roulette-tlc.svg';
 
 const CasinoGames = ({ t }) => {
   const text = t('casinoGames', { returnObjects: true });
