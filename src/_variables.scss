@@ -6,10 +6,13 @@ $gray: #4e4e4e;
 $light-gray: #979797;
 
 $dark-yellow: #ffc500;
+$red: #ec0000;
+$light-red: red;
 $green: #037b33;
 $light-green: #00d576;
+$very-light-green: #adf25d;
 
-$accent-color: #ec0000;
+$accent-color: $red;
 $secondary-color: $dark-yellow;
 
 /// Distance
@@ -46,6 +49,9 @@ $little-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.53);
 }
 @mixin dark-gray-gradient {
   @include vertical-gradient($gray, $black);
+}
+@mixin dark-gray-gradient-reverse {
+  @include vertical-gradient($black, $gray);
 }
 // background: linear-gradient(#e66465, #9198e5);
 

@@ -19,3 +19,33 @@
 .secondary {
   color: $secondary-color;
 }
+
+.btn {
+  font-size: 1em;
+  border-radius: $bor-rad;
+  padding: 0.5em 1em;
+  @include transition;
+  border: 1px solid transparent;
+}
+.btn-acc {
+  background-color: $accent-color;
+  color: $white;
+  &:hover {
+    box-shadow: 0 0 8px 4px darken($accent-color, 7%) inset;
+  }
+}
+.btn-sec {
+  background-color: $secondary-color;
+  color: $black;
+  &:hover {
+    box-shadow: 0 0 8px 4px darken($secondary-color, 7%) inset;
+  }
+}
+.btn-ter {
+  background-color: transparent;
+  color: $secondary-color;
+  &:hover {
+    box-shadow: 0 0 2px 1px darken($secondary-color, 5%) inset;
+    border-color: $secondary-color;
+  }
+}

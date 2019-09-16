@@ -1,0 +1,141 @@
+@import '../../variables';
+
+.bet-slip {
+  padding: $dist-low;
+  @include dark-gray-gradient-reverse;
+  border-radius: $bor-rad;
+
+  h2 {
+    @include section-header;
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 1.15em;
+  }
+
+  .tabs {
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    text-align: center;
+
+    .tab {
+      flex-basis: 33%;
+      padding: $dist-middle 0;
+      border-top: 3px solid transparent;
+      @include transition;
+      cursor: default;
+    }
+    .tab.active {
+      border-top-color: $secondary-color;
+      background-color: $black;
+    }
+  }
+
+  .editable-bets-list {
+    .editable-bet {
+      padding: $dist-middle;
+      font-size: 0.9em;
+
+      &:nth-child(odd) {
+        background-color: $black;
+      }
+
+      .league {
+        margin-bottom: $dist-low;
+
+        img {
+          margin-left: $dist-low;
+        }
+        i {
+          margin-right: auto;
+          @include transition;
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+
+      .teams {
+        border-bottom: 1px solid $gray;
+
+        .live {
+          background-color: $light-red;
+          padding: 2px $dist-low;
+        }
+        .score {
+          color: $very-light-green;
+          padding: 0 $dist-low;
+          font-size: 1.1em;
+        }
+        .names {
+          flex-basis: 75%;
+          justify-content: center;
+          .name {
+            display: inline-block;
+            flex-basis: 40%;
+
+            &:last-child {
+              text-align: right;
+            }
+          }
+          .vs {
+            padding: 0 $dist-low;
+          }
+        }
+      }
+
+      .market {
+        margin: $dist-big 0;
+      }
+
+      .info {
+        .string {
+          text-align: right;
+          margin: $dist-big 0;
+          justify-content: space-between;
+
+          .name {
+            flex-basis: 60%;
+          }
+          .value {
+            flex-basis: 38%;
+
+            input {
+              max-width: 86px;
+            }
+          }
+
+          .min-max {
+            font-size: 0.8em;
+            align-self: flex-end;
+
+            .flex {
+              span:first-child {
+                padding: 0 $dist-low;
+              }
+            }
+          }
+
+          .with-input {
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+
+  .bets-options {
+    padding: $dist-big;
+
+    .buttons {
+      justify-content: center;
+
+      button {
+        margin: 0 $dist-low;
+      }
+    }
+    &.odd-length {
+      background-color: $black;
+    }
+  }
+}

@@ -50,3 +50,12 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+input {
+  direction: rtl;
+  outline: none;
+  border: none;
+
+  border-radius: $bor-rad;
+  padding: $dist-low;
+}
