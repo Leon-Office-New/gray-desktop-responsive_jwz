@@ -2,6 +2,7 @@ import React from 'react';
 import MainSlider from '../../components/MainSlider';
 
 import BetSlip from '../../components/BetSlip';
+import SportsLive from '../../components/SportsLive';
 
 import './PrematchLeaguePage.scss';
 
@@ -11,6 +12,7 @@ const PrematchLeaguePage = () => {
       <div className="container flex with-aside">
         <aside>
           <BetSlip />
+          <SportsLive />
         </aside>
         <main>
           <MainSlider />

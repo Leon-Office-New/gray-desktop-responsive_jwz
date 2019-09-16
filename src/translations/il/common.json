@@ -118,5 +118,8 @@
     "accept": "מאשר כל יחס",
     "buttonBet": "בצע הימור",
     "buttonRemove": "הסר הכל"
+  },
+  "sportsLive": {
+    "header": "ספורט"
   }
 }

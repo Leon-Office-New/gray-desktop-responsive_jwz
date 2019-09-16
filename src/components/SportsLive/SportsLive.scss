@@ -1,0 +1,34 @@
+@import '../../variables';
+
+.sports-live {
+  @include dark-gray-gradient-reverse;
+  border-radius: $bor-rad;
+
+  h2 {
+    @include section-header;
+    font-weight: normal;
+    font-size: 1.15em;
+  }
+
+  .sports-list {
+    padding-bottom: $dist-middle;
+
+    .sport {
+      padding: $dist-middle $dist-big;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray;
+      }
+
+      .count {
+        flex-basis: 10%;
+        margin-right: auto;
+        text-align: right;
+      }
+
+      img {
+        margin-left: $dist-middle;
+      }
+    }
+  }
+}
