@@ -73,6 +73,7 @@ const MainSlider = props => {
         slideIndex={slide}
         afterSlide={afterSlide}
         height={'100%'}
+        heightMode={'max'}
       >
         {slides.map(item => {
           return item;
