@@ -3,27 +3,27 @@
     "menu": [
       {
         "text": "ספורט",
-        "path": "/"
+        "path": "/prematch-league"
       },
       {
         "text": "קזינו",
-        "path": "/casino"
+        "path": "/"
       },
       {
         "text": "קזינו חי",
-        "path": "/live-casino"
+        "path": "/"
       },
       {
         "text": "פוקר",
-        "path": "/poker"
+        "path": "/"
       },
       {
         "text": "הגרלה",
-        "path": "/lottery"
+        "path": "/"
       },
       {
         "text": "סיכוי",
-        "path": "/chance"
+        "path": "/"
       }
     ],
     "loggedNav": {
