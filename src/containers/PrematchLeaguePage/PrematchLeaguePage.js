@@ -20,6 +20,10 @@ const PrematchLeaguePage = () => {
           <MainSlider />
         </main>
       </div>
+      <button className="flex btn chat-btn">
+        <i className="far fa-comments"></i>
+        <span>צ'אט חי</span>
+      </button>
     </main>
   );
 };

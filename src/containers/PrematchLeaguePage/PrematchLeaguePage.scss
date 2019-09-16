@@ -13,4 +13,21 @@
       width: 1070px;
     }
   }
+
+  .chat-btn {
+    position: fixed;
+    bottom: 64px;
+    left: $dist-big;
+    background-color: $green;
+    color: $white;
+    @include transition;
+
+    &:hover {
+      background-color: darken($light-green, 10%);
+    }
+
+    i {
+      margin-left: $dist-middle;
+    }
+  }
 }
