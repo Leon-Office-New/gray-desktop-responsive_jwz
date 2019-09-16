@@ -1,6 +1,5 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import './SportsLive.scss';
 
 import soccer from '../../images/soccer-ball-variant.svg';

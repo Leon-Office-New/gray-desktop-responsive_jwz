@@ -1,0 +1,55 @@
+@import '../../variables';
+
+.related-games {
+  @include dark-gray-gradient-reverse;
+  border-radius: $bor-rad;
+
+  h2 {
+    @include section-header;
+    font-weight: normal;
+    font-size: 1.15em;
+  }
+
+  .games-list {
+    padding: 0 $dist-low $dist-middle $dist-low;
+
+    .related {
+      display: block;
+      padding: 0 $dist-middle;
+      @include transition;
+      // height: 46px;
+      overflow: hidden;
+      border-bottom: 1px solid $gray;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .string {
+        justify-content: space-between;
+        margin: $dist-low 0;
+      }
+
+      .general {
+        border-bottom: 1px solid transparent;
+      }
+
+      &.open {
+        background-color: $black;
+
+        .general {
+          border-bottom-color: $gray;
+        }
+      }
+
+      .odds {
+        height: 0px;
+        @include transition(200ms);
+
+        &.open {
+          height: 60px;
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import MainSlider from '../../components/MainSlider';
 
 import BetSlip from '../../components/BetSlip';
 import SportsLive from '../../components/SportsLive';
+import RelatedGames from '../../components/RelatedGames';
 
 import './PrematchLeaguePage.scss';
 
@@ -13,6 +14,7 @@ const PrematchLeaguePage = () => {
         <aside>
           <BetSlip />
           <SportsLive />
+          <RelatedGames />
         </aside>
         <main>
           <MainSlider />

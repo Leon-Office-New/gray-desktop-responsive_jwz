@@ -121,5 +121,8 @@
   },
   "sportsLive": {
     "header": "ספורט"
+  },
+  "relatedGames": {
+    "header": "משחקים קרובים"
   }
 }
