@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import Header from './containers/Header';
 import HomePage from './containers/HomePage';
+import PrematchLeaguePage from './containers/PrematchLeaguePage';
 import Footer from './containers/Footer';
 import './App.scss';
 
@@ -21,6 +22,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/prematch-league" component={PrematchLeaguePage} />
         </Switch>
         <Footer />
       </div>
