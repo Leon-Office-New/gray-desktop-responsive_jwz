@@ -14,6 +14,7 @@
   @include transition;
 
   &:hover {
+    border-color: $secondary-color;
     background-color: $secondary-color;
     color: $black;
   }
@@ -47,7 +48,7 @@
       height: 0;
       border-style: solid;
       border-width: $h $w 0 $w;
-      border-color: red transparent transparent transparent;
+      border-color: $light-red transparent transparent transparent;
     }
   }
 }
