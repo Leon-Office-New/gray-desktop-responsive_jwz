@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { withTranslation } from 'react-i18next';
 import Carousel from 'nuka-carousel';
+import BetItem from '../BetItem';
 import m_logo from '../../images/manchester.png';
 import j_logo from '../../images/juventus.png';
 
@@ -55,18 +56,18 @@ const Game = props => {
         </div>
       </div>
       <div className="col odds">
-        <div className="item more">1.89</div>
-        <div className="item more">1.89</div>
-        <div className="item less">1.89</div>
+        <BetItem>1.89</BetItem>
+        <BetItem>1.89</BetItem>
+        <BetItem>1.89</BetItem>
       </div>
       <div className="col odds">
-        <div className="item more">1.89</div>
-        <div className="item less">1.89</div>
+        <BetItem>1.89</BetItem>
+        <BetItem>1.89</BetItem>
       </div>
       <div className="col odds">
-        <div className="item more">1.89</div>
-        <div className="item more">1.89</div>
-        <div className="item less">1.89</div>
+        <BetItem>1.89</BetItem>
+        <BetItem>1.89</BetItem>
+        <BetItem>1.89</BetItem>
       </div>
       <div className="col last">+418</div>
     </div>

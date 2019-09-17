@@ -1,0 +1,53 @@
+@import '../../variables';
+
+.bet-item {
+  position: relative;
+  margin: 1px 0;
+  border: 1px solid $gray;
+  background-color: $black;
+  font-size: 0.9em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include transition;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $black;
+  }
+
+  $h: 6px;
+  $w: 3px;
+
+  &.more {
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: calc(50% - 4px);
+      left: 2px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 $w $h $w;
+      border-color: transparent transparent $light-green transparent;
+    }
+  }
+
+  &.less {
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: calc(50% - 2px);
+      left: 2px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: $h $w 0 $w;
+      border-color: red transparent transparent transparent;
+    }
+  }
+}
