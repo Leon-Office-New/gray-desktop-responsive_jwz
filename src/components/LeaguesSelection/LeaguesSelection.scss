@@ -33,6 +33,13 @@
       margin: 0 18px;
       border-bottom: 1px solid $gray;
 
+      &:last-child,
+      &:nth-child(24),
+      &:nth-child(48),
+      &:nth-child(72) {
+        border-bottom-color: transparent;
+      }
+
       img {
         margin: 0 $dist-middle;
       }
