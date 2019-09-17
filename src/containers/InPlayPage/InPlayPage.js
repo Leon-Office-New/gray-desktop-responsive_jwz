@@ -1,10 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import SportsMenu from '../../components/SportsMenu';
 
-const InPlayPage = props => {
-  return <div>InPlayPage</div>;
+import BetSlip from '../../components/BetSlip';
+import RelatedGames from '../../components/RelatedGames';
+
+import './InPlayPage.scss';
+
+const InPlayPage = () => {
+  return (
+    <main className="in-play-page">
+      <SportsMenu />
+      <div className="container flex with-aside">
+        <aside>
+          <BetSlip />
+          <RelatedGames />
+        </aside>
+        <main>InPlayPage</main>
+      </div>
+    </main>
+  );
 };
-
-InPlayPage.propTypes = {};
 
 export default InPlayPage;
