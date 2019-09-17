@@ -124,5 +124,10 @@
   },
   "relatedGames": {
     "header": "משחקים קרובים"
+  },
+  "leaguesSelection": {
+    "lineRunning": "- ליין רץ -",
+    "buttonSelect": "הצג ליגות שנבחרו",
+    "buttonTodays": "משחקי היום"
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import MainSlider from '../../components/MainSlider';
+import LeaguesSelection from '../../components/LeaguesSelection';
 
 import BetSlip from '../../components/BetSlip';
 import SportsLive from '../../components/SportsLive';
@@ -18,6 +19,7 @@ const PrematchLeaguePage = () => {
         </aside>
         <main>
           <MainSlider />
+          <LeaguesSelection />
         </main>
       </div>
       <button className="flex btn chat-btn">

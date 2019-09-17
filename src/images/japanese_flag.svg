@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>py</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="16"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bet-Select-Liga-Page-English" transform="translate(-869.000000, -1082.000000)">
+            <g id="Group-14" transform="translate(454.000000, 349.000000)">
+                <g id="Group-12" transform="translate(381.000000, 62.000000)">
+                    <g id="Group-6" transform="translate(33.000000, 0.000000)">
+                        <g id="py" transform="translate(1.000000, 671.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+                            <image id="250px-Flag_of_Japan.svg" mask="url(#mask-2)" x="0" y="0" width="23.9520958" height="16" xlink:href="data:image/png;base64,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"></image>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

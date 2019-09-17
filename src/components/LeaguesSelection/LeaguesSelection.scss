@@ -1,0 +1,60 @@
+@import '../../variables';
+
+.leagues-selection {
+  @include dark-gray-gradient-reverse;
+  border-radius: $bor-rad;
+  padding: $dist-big;
+
+  h2 {
+    @include section-header;
+    font-weight: normal;
+    justify-content: space-between;
+    font-size: 1.15em;
+    img {
+      width: 16px;
+      margin: 0 $dist-middle;
+    }
+  }
+
+  .leagues-list {
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    direction: rtl;
+
+    .league {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      padding: $dist-middle;
+      margin: 0 18px;
+      border-bottom: 1px solid $gray;
+
+      img {
+        margin: 0 $dist-middle;
+      }
+    }
+  }
+
+  .buttons {
+    justify-content: center;
+    margin-top: $dist-very-big;
+    margin-bottom: $dist-big;
+
+    .btn {
+      margin: 0 $dist-big;
+      font-size: 1.2em;
+      width: 168px;
+    }
+    .btn-ter {
+      border-color: $secondary-color;
+      &:hover {
+        background-color: $secondary-color;
+        color: $black;
+      }
+    }
+  }
+}
