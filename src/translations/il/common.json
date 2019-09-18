@@ -129,5 +129,21 @@
     "lineRunning": "- ליין רץ -",
     "buttonSelect": "הצג ליגות שנבחרו",
     "buttonTodays": "משחקי היום"
+  },
+  "inPlayTable": {
+    "header": {
+      "time": "Time",
+      "play": "Play",
+      "markets": [
+        {
+          "type": "Full Time",
+          "odds": ["Odds", "Under/Over", "1X2"]
+        },
+        {
+          "type": "Half Time",
+          "odds": ["Odds", "Under/Over", "1X2"]
+        }
+      ]
+    }
   }
 }

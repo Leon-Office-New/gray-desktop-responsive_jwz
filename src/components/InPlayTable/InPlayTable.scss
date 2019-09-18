@@ -1,5 +1,172 @@
 @import '../../variables';
 
 .in-play-table {
-  // border: 1px solid $gray;
+  $dist: 2px;
+
+  background-color: $dark-gray;
+  border: $dist solid $gray;
+
+  .table-header {
+    height: 64px;
+    padding: $dist;
+
+    .col {
+      background-color: $gray;
+      height: 100%;
+      flex-basis: 6%;
+
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-left: $dist;
+      }
+    }
+
+    .time,
+    .play {
+      line-height: 400%;
+    }
+
+    .type,
+    .odd {
+      line-height: 180%;
+    }
+
+    .play {
+      flex-basis: 24%;
+    }
+    .market {
+      flex-basis: 30%;
+
+      .type {
+        height: 53%;
+        border-bottom: $dist solid $dark-gray;
+      }
+      .odds {
+        height: 47%;
+        justify-content: space-between;
+        text-align: center;
+        background-color: $dark-gray;
+
+        .odd {
+          background-color: $gray;
+          flex-basis: 34%;
+          height: 100%;
+          &:not(:last-child) {
+            margin-left: $dist; // solid $dark-gray;
+          }
+        }
+      }
+    }
+  }
+
+  .leagues-list {
+    .league {
+      .name {
+        padding: $dist-middle;
+
+        img {
+          margin-left: $dist-middle;
+
+          &:nth-child(2) {
+            width: 16px;
+          }
+        }
+      }
+      .game {
+        padding: $dist;
+
+        &:not(:last-child) {
+          padding-bottom: 0;
+        }
+
+        &:nth-child(odd) {
+          .col {
+            background-color: $black;
+          }
+        }
+        &:nth-child(even) {
+          .col {
+            background-color: darken($gray, 14%);
+          }
+        }
+
+        .row {
+          align-items: stretch;
+          justify-content: space-between;
+
+          &:not(:last-child) {
+            margin-bottom: $dist;
+          }
+
+          .col {
+            flex-basis: 6%;
+            padding: $dist-middle;
+            text-align: center;
+
+            &:not(:last-child) {
+              margin-left: $dist;
+            }
+          }
+          .time {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .score {
+              font-size: 1.2em;
+              color: $very-light-green;
+              margin-bottom: $dist-middle;
+            }
+            .time {
+              color: $light-gray;
+            }
+          }
+          .play {
+            flex-basis: 24%;
+            img {
+              width: 16px;
+              margin-left: $dist-middle;
+            }
+            div {
+              margin-top: $dist-low;
+              &:not(:last-child) {
+                margin-bottom: 12px;
+              }
+            }
+          }
+          .market {
+            flex-basis: 10%;
+
+            .odd {
+              justify-content: center;
+
+              &:not(:last-child) {
+                margin-bottom: $dist;
+              }
+
+              span {
+                font-size: 0.9em;
+                padding: 0 $dist;
+              }
+
+              .bet-item {
+                text-align: center;
+                padding: $dist-low $dist-middle;
+              }
+            }
+          }
+          .mores,
+          .favourite {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .favourite {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
 }

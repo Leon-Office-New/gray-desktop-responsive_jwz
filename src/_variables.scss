@@ -4,7 +4,9 @@ $black: #191919;
 
 $gray: #4e4e4e;
 $light-gray: #979797;
+$dark-gray: darken($gray, 10%);
 
+$yellow: #ffe300;
 $dark-yellow: #ffc500;
 $red: #ec0000;
 $light-red: red;
@@ -36,16 +38,16 @@ $little-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.53);
 }
 
 @mixin yellow-gradient {
-  @include vertical-gradient(#ffe300, #ffb400);
+  @include vertical-gradient($yellow, $dark-yellow);
 }
 @mixin yellow-gradient-reverse {
-  @include vertical-gradient(#ffb400, #ffe300);
+  @include vertical-gradient($dark-yellow, $yellow);
 }
 @mixin red-gradient-reverse {
-  @include vertical-gradient(#bc0000, #ff0000);
+  @include vertical-gradient($red, $light-red);
 }
 @mixin red-gradient {
-  @include vertical-gradient(#ff0000, #bc0000);
+  @include vertical-gradient($light-red, $red);
 }
 @mixin dark-gray-gradient {
   @include vertical-gradient($gray, $black);
