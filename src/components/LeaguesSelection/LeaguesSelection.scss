@@ -17,7 +17,7 @@
   }
 
   .leagues-list {
-    max-height: 800px;
+    max-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -34,6 +34,7 @@
       border-bottom: 1px solid $gray;
 
       &:last-child,
+      &:nth-child(12),
       &:nth-child(24),
       &:nth-child(48),
       &:nth-child(72) {

@@ -3,6 +3,8 @@ import { withTranslation } from 'react-i18next';
 import './LeaguesSelection.scss';
 
 import soccer_icon from '../../images/soccer_icon.svg';
+import tennis_icon from '../../images/tennis_icon.svg';
+import basketball_icon from '../../images/basketball_icon.svg';
 
 import argentina_flag from '../../images/argentina_flag.svg';
 import brazil_flag from '../../images/brazil_flag.svg';
@@ -60,7 +62,7 @@ const LeaguesSelection = ({ t }) => {
   ];
 
   leagues = leagues.concat(leagues);
-  leagues = leagues.concat(leagues);
+  // leagues = leagues.concat(leagues);
 
   return (
     <section className="leagues-selection">
@@ -68,6 +70,46 @@ const LeaguesSelection = ({ t }) => {
         <div className="flex sport">
           <img src={soccer_icon} alt="sport_logo" />
           <span className="name">{'כדורגל'}</span>
+        </div>
+        <div className="text">{text.lineRunning}</div>
+      </h2>
+      {leagues.length > 0 && (
+        <ul className="leagues-list">
+          {leagues.map((item, index) => {
+            return (
+              <li key={index} className=" league">
+                <input type="checkbox" />
+                <img src={item.flag} alt="flag_icon" />
+                <span>{item.name}</span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      <h2 className="flex">
+        <div className="flex sport">
+          <img src={tennis_icon} alt="sport_logo" />
+          <span className="name">{'טניס'}</span>
+        </div>
+        <div className="text">{text.lineRunning}</div>
+      </h2>
+      {leagues.length > 0 && (
+        <ul className="leagues-list">
+          {leagues.map((item, index) => {
+            return (
+              <li key={index} className=" league">
+                <input type="checkbox" />
+                <img src={item.flag} alt="flag_icon" />
+                <span>{item.name}</span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      <h2 className="flex">
+        <div className="flex sport">
+          <img src={basketball_icon} alt="sport_logo" />
+          <span className="name">{'כדורסל'}</span>
         </div>
         <div className="text">{text.lineRunning}</div>
       </h2>
