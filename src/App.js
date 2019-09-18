@@ -6,6 +6,7 @@ import Header from './containers/Header';
 import HomePage from './containers/HomePage';
 import PrematchLeaguePage from './containers/PrematchLeaguePage';
 import InPlayPage from './containers/InPlayPage';
+import InPlayGamePage from './containers/InPlayGamePage';
 import Footer from './containers/Footer';
 import './App.scss';
 
@@ -25,6 +26,7 @@ class App extends Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/prematch-league" component={PrematchLeaguePage} />
           <Route exact path="/in-play" component={InPlayPage} />
+          <Route exact path="/in-play-game/:id" component={InPlayGamePage} />
         </Switch>
         <Footer />
       </div>
