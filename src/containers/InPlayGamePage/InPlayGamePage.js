@@ -2,6 +2,7 @@ import React from 'react';
 import SportsMenu from '../../components/SportsMenu';
 
 import BetSlip from '../../components/BetSlip';
+import TimeLineList from '../../components/TimeLineList';
 import './InPlayGamePage.scss';
 
 const InPlayGamePage = () => {
@@ -11,6 +12,7 @@ const InPlayGamePage = () => {
       <div className="container flex with-aside">
         <aside>
           <BetSlip />
+          <TimeLineList />
         </aside>
         <main>InPlayGamePage</main>
       </div>

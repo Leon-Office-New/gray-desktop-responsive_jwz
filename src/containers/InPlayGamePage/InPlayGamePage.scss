@@ -1,5 +1,7 @@
 @import '../../variables';
 
 .in-play-game-page {
-  // margin: $dist-big 0;
+  .time-line-list {
+    margin-top: $dist-very-big;
+  }
 }

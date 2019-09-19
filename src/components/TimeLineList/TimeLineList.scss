@@ -1,0 +1,52 @@
+@import '../../variables';
+
+.time-line-list {
+  @include dark-gray-gradient;
+  border-radius: $bor-rad;
+
+  h2 {
+    @include section-header;
+    font-weight: normal;
+    font-size: 1.15em;
+  }
+
+  .incidents-list {
+    padding: 0 $dist-middle $dist-very-big $dist-middle;
+
+    .incident {
+      align-items: stretch;
+      text-align: right;
+      padding: $dist-middle 0;
+      &:first-child {
+        padding-top: 0;
+      }
+      border-bottom: 1px solid $gray;
+
+      .time-icon {
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+          display: inline-block;
+        }
+        div {
+          color: aqua;
+        }
+      }
+
+      .text {
+        padding: 0 $dist-big;
+        .player {
+          margin-top: $dist-middle;
+          img {
+            width: 16px;
+            margin: 0 $dist-low;
+          }
+        }
+      }
+    }
+  }
+}
