@@ -46,11 +46,11 @@ const Game = props => {
         </div>
         <div className="col play">
           <div className="flex">
-            <img src={mu} />
+            <img src={mu} alt="team1_logo" />
             <span>Manchester United</span>
           </div>
           <div className="flex">
-            <img src={ju} />
+            <img src={ju} alt="team1_logo" />
             <span>Manchester United</span>
           </div>
           <div className="flex draw">Draw</div>

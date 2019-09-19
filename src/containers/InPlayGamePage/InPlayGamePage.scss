@@ -1,15 +1,5 @@
 @import '../../variables';
 
 .in-play-game-page {
-  #line {
-    width: 800px;
-    height: 100px;
-
-    background: linear-gradient(
-      to right,
-      hsl(150, 100%, 25%),
-      hsl(50, 100%, 50%),
-      hsl(0, 100%, 50%)
-    );
-  }
+  // margin: $dist-big 0;
 }
