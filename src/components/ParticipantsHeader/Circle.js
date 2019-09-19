@@ -35,7 +35,7 @@ const Circle = ({ percent, children }) => {
     );
   }
 
-  console.log('dot deg', dotDeg);
+  // console.log('dot deg', dotDeg);
 
   return (
     <div className="circle">

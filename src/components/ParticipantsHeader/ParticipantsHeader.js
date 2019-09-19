@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Circle from './Circle';
 import './ParticipantsHeader.scss';
 
+import UEFA from '../../images/uefa.png';
+import mu from '../../images/manchester.png';
+import ju from '../../images/juventus.png';
+
 const ParticipantsHeader = () => {
   const [now, setNow] = useState(new Date().getSeconds());
-
-  // setInterval(() => {
-  //   setNow(new Date())
-  // }, 1000);
-
-  // const hour = 3600
-  // const mins = now.getMinutes()
-  // const seconds = now.getSeconds()
-  // const nowSeconds = seconds + mins * 60
 
   const percent = now / 60;
 
@@ -23,24 +18,39 @@ const ParticipantsHeader = () => {
     }, 1000);
   }
 
-  // console.log(percent)
-  // useEffect(() => {
-  //   setNow(new Date().getSeconds())
-  //   return () => {
-  //     // cleanup
-  //   };
-  // }, [now])
-
   return (
     <section className="participants-header">
-      <Circle percent={percent}>
-        <div className="flex score">
-          <span>2</span>
-          <span>:</span>
-          <span>1</span>
+      <div className="content">
+        <div className="circle-container">
+          <Circle percent={percent}>
+            <div className="flex score">
+              <span>2</span>
+              <span>:</span>
+              <span>1</span>
+            </div>
+            <div className="time">{`${new Date().toLocaleTimeString()}`}</div>
+          </Circle>
         </div>
-        <div className="time">{`${new Date().toLocaleTimeString()}`}</div>
-      </Circle>
+        <div className="flex game-info">
+          <div className="flex">1/4 Quarter Finals</div>
+          <div className="middle" />
+          <div className="flex">
+            <span>UEFA Champions League</span>
+            <img src={UEFA} alt="league logo" />
+          </div>
+        </div>
+        <div className="flex participants">
+          <div className="flex">
+            <span>Manchester United</span>
+            <img src={mu} alt="team logo" />
+          </div>
+          <div className="middle" />
+          <div className="flex">
+            <img src={ju} alt="team logo" />
+            <span>Juventus</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

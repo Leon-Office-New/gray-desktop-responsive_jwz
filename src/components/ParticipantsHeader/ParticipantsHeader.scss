@@ -1,8 +1,63 @@
 @import '../../variables';
 
 .participants-header {
-  // background-color: $secondary-color;
-  padding: 10px;
+  margin-top: $dist-very-big;
+
+  .content {
+    max-width: 75%;
+    margin: 0 auto;
+    position: relative;
+
+    .circle-container {
+      position: absolute;
+      left: calc(50% - 96px);
+      top: -15%;
+    }
+
+    .game-info {
+      height: 40px;
+      justify-content: center;
+      background-color: $secondary-color;
+      color: $black;
+      img {
+        width: 23px;
+        margin: 0 $dist-big;
+      }
+      .flex {
+        flex-basis: 33%;
+        &:first-child {
+          justify-content: flex-end;
+        }
+      }
+      .middle {
+        width: 180px;
+      }
+    }
+
+    .participants {
+      height: 72px;
+      border: 2px solid $gray;
+      background: linear-gradient(to right, $black, $gray, $black);
+      justify-content: center;
+      .middle {
+        width: 200px;
+      }
+      .flex {
+        flex-basis: 33%;
+        font-size: 20px;
+        &:first-child {
+          justify-content: flex-end;
+        }
+        img {
+          width: 40px;
+          margin: 0 $dist-middle;
+        }
+        span {
+          padding-bottom: $dist-middle;
+        }
+      }
+    }
+  }
 
   .circle {
     display: flex;
