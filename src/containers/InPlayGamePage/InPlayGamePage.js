@@ -1,5 +1,6 @@
 import React from 'react';
 import SportsMenu from '../../components/SportsMenu';
+import ParticipantsHeader from '../../components/ParticipantsHeader';
 
 import BetSlip from '../../components/BetSlip';
 import TimeLineList from '../../components/TimeLineList';
@@ -14,7 +15,9 @@ const InPlayGamePage = () => {
           <BetSlip />
           <TimeLineList />
         </aside>
-        <main>InPlayGamePage</main>
+        <main>
+          <ParticipantsHeader />
+        </main>
       </div>
     </main>
   );

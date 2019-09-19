@@ -11,6 +11,11 @@
   --direction: 'row-reverse'; // 'row-reverse' for rtl
 }
 
+@font-face {
+  font-family: 'digital-7';
+  src: url('./fonts/digital-7.regular.ttf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
