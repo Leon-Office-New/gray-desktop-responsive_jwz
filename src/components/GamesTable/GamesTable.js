@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { withTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 import BetItem from '../BetItem';
 import m_logo from '../../images/manchester.png';
@@ -42,7 +43,7 @@ const TableHeader = props => {
 
 const Game = props => {
   return (
-    <div className="flex game">
+    <Link to="/in-play-game/1" className="flex game">
       <div className="col time">15’</div>
       <div className="col teams">
         <div className="team">
@@ -70,7 +71,7 @@ const Game = props => {
         <BetItem>1.89</BetItem>
       </div>
       <div className="col last">+418</div>
-    </div>
+    </Link>
   );
 };
 

@@ -198,6 +198,11 @@
         font-size: 0.9em;
         border-bottom: 1px solid $gray;
 
+        @include transition;
+        &:hover {
+          background-color: $gray;
+        }
+
         .col {
           cursor: default;
           flex-basis: 7%;
