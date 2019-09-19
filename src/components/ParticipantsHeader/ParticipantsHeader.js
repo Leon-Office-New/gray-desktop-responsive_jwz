@@ -13,7 +13,7 @@ const ParticipantsHeader = () => {
 
   let interval = null;
   if (!interval) {
-    setInterval(() => {
+    interval = setInterval(() => {
       setNow(new Date().getSeconds());
     }, 1000);
   }

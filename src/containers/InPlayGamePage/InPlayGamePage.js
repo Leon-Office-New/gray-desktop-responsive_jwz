@@ -6,6 +6,8 @@ import BetSlip from '../../components/BetSlip';
 import TimeLineList from '../../components/TimeLineList';
 import './InPlayGamePage.scss';
 
+import field from '../../images/field.png';
+
 const InPlayGamePage = () => {
   return (
     <main className="in-play-page in-play-game-page">
@@ -17,6 +19,7 @@ const InPlayGamePage = () => {
         </aside>
         <main>
           <ParticipantsHeader />
+          <img className="field" src={field} alt="field" />
         </main>
       </div>
     </main>
