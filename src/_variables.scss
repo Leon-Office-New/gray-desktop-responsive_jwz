@@ -59,7 +59,7 @@ $little-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.53);
 
 /// Helpers
 @mixin transition($speed: 300ms) {
-  transition: all $speed ease-in-out;
+  transition: all $speed linear;
 }
 @mixin section-header($color: $white, $dist: $dist-big) {
   position: relative;

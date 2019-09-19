@@ -2,6 +2,7 @@
 
 .participants-header {
   margin-top: $dist-very-big;
+  $speed: 1s;
 
   .content {
     max-width: 75%;
@@ -67,37 +68,19 @@
     position: relative;
     width: 188px;
     height: 188px;
-    // margin: 100px auto;
-    // background-color: white;
 
     border-radius: 50%;
     cursor: default;
     border: 1px solid $light-gray;
 
     .line {
-      @include transition;
+      @include transition($speed);
       position: absolute;
       height: 93px;
       width: 4px;
       top: 0;
       left: calc(50% - 2px);
       transform-origin: bottom center;
-
-      .color {
-        position: relative;
-        // &:first-child {
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          background-color: white;
-          z-index: 2;
-        }
-        // }
-      }
     }
 
     .text {
@@ -145,13 +128,13 @@
     }
 
     .line-with-dot {
-      @include transition;
+      @include transition($speed);
       position: relative;
       height: 198px;
       width: 3px;
       .dot {
         // position: absolute;
-        @include transition;
+        @include transition($speed);
         width: 20px;
         height: 20px;
         margin-left: auto;
