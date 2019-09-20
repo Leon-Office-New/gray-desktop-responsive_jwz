@@ -1,0 +1,89 @@
+@import '../../../variables';
+
+.market-component {
+  @include dark-gray-gradient;
+  @include transition;
+  direction: ltr;
+
+  h2 {
+    position: relative;
+    @include section-header;
+    font-weight: normal;
+    font-size: 1.15em;
+    margin-top: 0;
+
+    .fas {
+      position: absolute;
+      top: $dist-big;
+      right: $dist-big;
+      @include transition;
+      transform: rotateZ(180deg);
+      // transform-origin: bottom;
+      padding-bottom: 4px;
+
+      &:hover {
+        color: $secondary-color;
+      }
+
+      &.is-up {
+        transform: rotateX(0deg);
+      }
+    }
+  }
+
+  .bets-list {
+    padding: 0 $dist-big $dist-big $dist-big;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .gray-line {
+      width: 1px;
+      background-color: $gray;
+
+      &:last-child {
+        // margin-left: 50%;
+      }
+    }
+
+    // li:not(:nth-child(even)) {
+    //   margin-left: auto;
+    // }
+
+    .bet {
+      justify-content: space-between;
+      // align-items: stretch;
+      width: 45%;
+      padding-right: $dist-middle;
+
+      span {
+        // max-height: 24px;
+        // max-width: 70px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .bet-item {
+        padding: $dist-low 12px;
+      }
+
+      &.with-border-side {
+        border-left: 1px solid $gray;
+        padding-left: $dist-middle;
+        padding-right: 0;
+      }
+      &.with-border-bottom {
+        border-bottom: 1px solid $gray;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &.three {
+      .bet {
+        width: 30%;
+      }
+    }
+  }
+}

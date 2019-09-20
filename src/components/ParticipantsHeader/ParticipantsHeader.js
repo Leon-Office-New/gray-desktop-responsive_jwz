@@ -7,14 +7,14 @@ import mu from '../../images/manchester.png';
 import ju from '../../images/juventus.png';
 
 const ParticipantsHeader = () => {
-  const [now, setNow] = useState(new Date().getMinutes());
+  const [now, setNow] = useState(new Date().getSeconds());
 
   const percent = now / 60;
 
   let interval = null;
   if (!interval) {
     interval = setInterval(() => {
-      setNow(new Date().getMinutes());
+      setNow(new Date().getSeconds());
     }, 1000);
   }
 
