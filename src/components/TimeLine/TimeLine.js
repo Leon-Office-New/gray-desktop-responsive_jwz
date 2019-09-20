@@ -46,7 +46,7 @@ let list = [
 ];
 
 const TimeStamp = ({ position, percent, text }) => {
-  const gray = '#4e4e4e';
+  const gray = '#979797';
   let scale = chroma.scale(['037b33', 'ffc500', 'ec0000']);
   let color = scale(position).hex();
 
@@ -61,8 +61,7 @@ const TimeStamp = ({ position, percent, text }) => {
     >
       <div className="line" style={{ backgroundColor: color }} />
       <span className="text" style={{ color: color }}>
-        {' '}
-        {text}{' '}
+        {text}
       </span>
     </div>
   );
@@ -96,7 +95,7 @@ const Incident = ({ incident }) => {
 };
 
 const TimeLine = () => {
-  const [now, setNow] = useState(new Date().getMinutes());
+  const [now, setNow] = useState(new Date().getSeconds());
   let scale = chroma.scale(['037b33', 'ffc500', 'ec0000']);
 
   const percent = now / 60;
@@ -105,7 +104,7 @@ const TimeLine = () => {
   let interval = null;
   if (!interval) {
     interval = setInterval(() => {
-      setNow(new Date().getMinutes());
+      setNow(new Date().getSeconds());
     }, 1000);
   }
 
