@@ -19,7 +19,7 @@
       @include transition;
       transform: rotateZ(180deg);
       // transform-origin: bottom;
-      padding-bottom: 4px;
+      padding-bottom: 5px;
 
       &:hover {
         color: $secondary-color;
@@ -40,10 +40,6 @@
     .gray-line {
       width: 1px;
       background-color: $gray;
-
-      &:last-child {
-        // margin-left: 50%;
-      }
     }
 
     // li:not(:nth-child(even)) {
