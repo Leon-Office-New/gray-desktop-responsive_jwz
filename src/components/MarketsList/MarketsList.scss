@@ -1,0 +1,21 @@
+@import '../../variables';
+
+.markets-list {
+  .types-list {
+    justify-content: center;
+
+    .type {
+      padding: $dist-middle;
+      margin: 0 $dist-middle;
+      border-bottom: 2px solid transparent;
+      cursor: default;
+      @include transition;
+
+      &:hover,
+      &.selected {
+        color: $secondary-color;
+        border-bottom-color: $secondary-color;
+      }
+    }
+  }
+}

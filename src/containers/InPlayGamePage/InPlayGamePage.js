@@ -2,6 +2,7 @@ import React from 'react';
 import SportsMenu from '../../components/SportsMenu';
 import ParticipantsHeader from '../../components/ParticipantsHeader';
 import TimeLine from '../../components/TimeLine';
+import MarketsList from '../../components/MarketsList';
 
 import BetSlip from '../../components/BetSlip';
 import TimeLineList from '../../components/TimeLineList';
@@ -22,6 +23,7 @@ const InPlayGamePage = () => {
           <ParticipantsHeader />
           <img className="field" src={field} alt="field" />
           <TimeLine />
+          <MarketsList />
         </main>
       </div>
     </main>

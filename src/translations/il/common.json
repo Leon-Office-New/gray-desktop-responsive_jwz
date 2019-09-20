@@ -148,5 +148,35 @@
   },
   "timeLineList": {
     "header": "TIMELINE"
+  },
+  "marketsList": {
+    "header": {
+      "types": [
+        {
+          "id": 1,
+          "name": "ALL"
+        },
+        {
+          "id": 2,
+          "name": "MATCH"
+        },
+        {
+          "id": 3,
+          "name": "DISABILITY"
+        },
+        {
+          "id": 4,
+          "name": "TOTAL"
+        },
+        {
+          "id": 5,
+          "name": "HOWEVER"
+        },
+        {
+          "id": 6,
+          "name": "CORNERS"
+        }
+      ]
+    }
   }
 }

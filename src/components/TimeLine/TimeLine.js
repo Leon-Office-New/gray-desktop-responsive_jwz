@@ -67,11 +67,15 @@ const TimeStamp = ({ position, percent, text }) => {
   );
 };
 
-const Incident = ({ incident }) => {
+const Incident = ({ incident, percent }) => {
   return (
     <div
       className="incident"
-      style={{ left: `calc(${incident.position * 100}%)` }}
+      style={{
+        left: `calc(${incident.position * 100}%)`,
+        // display: percent > incident.position * 1.05 ? 'block' : 'none',
+        opacity: percent > incident.position * 1.05 ? '1' : '0'
+      }}
     >
       <div className="content">
         <img
@@ -111,7 +115,7 @@ const TimeLine = () => {
   return (
     <section className="time-line">
       {list.map((item, index) => {
-        return <Incident key={index} incident={item} />;
+        return <Incident key={index} incident={item} percent={percent} />;
       })}
       <div className="gray-line" style={{ width: `${100 - percent * 100}%` }} />
       <div
