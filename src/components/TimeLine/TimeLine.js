@@ -57,23 +57,12 @@ const TimeStamp = ({ position, percent, text }) => {
   return (
     <div
       className="time-stamp"
-      style={{
-        left: `calc(${position * 100}% - 22px)`
-      }}
+      style={{ left: `calc(${position * 100}% - 22px)` }}
     >
-      <div
-        className="line"
-        style={{
-          backgroundColor: color
-        }}
-      />
-      <span
-        className="text"
-        style={{
-          color: color
-        }}
-      >
-        {text}
+      <div className="line" style={{ backgroundColor: color }} />
+      <span className="text" style={{ color: color }}>
+        {' '}
+        {text}{' '}
       </span>
     </div>
   );
@@ -83,9 +72,7 @@ const Incident = ({ incident }) => {
   return (
     <div
       className="incident"
-      style={{
-        left: `calc(${incident.position * 100}%)`
-      }}
+      style={{ left: `calc(${incident.position * 100}%)` }}
     >
       <div className="content">
         <img
