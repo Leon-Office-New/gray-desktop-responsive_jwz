@@ -1,0 +1,112 @@
+@import '../../variables';
+
+.time-line {
+  $speed: 1s;
+
+  position: relative;
+  width: 70%;
+  height: 4px;
+  margin: $dist-big auto;
+  background: linear-gradient(to right, $green, $dark-yellow, $red);
+
+  .dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    @include transition($speed);
+    top: -5px;
+    left: 0;
+    z-index: 2;
+  }
+
+  .gray-line {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    background-color: $gray;
+    @include transition($speed);
+  }
+
+  .incident {
+    position: absolute;
+    top: -10px;
+    z-index: 3;
+
+    .incident-icon {
+      height: 30px;
+    }
+
+    .content {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        opacity: 0;
+        @include transition;
+        position: absolute;
+        top: -12px;
+        right: 40%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 4px 0 4px;
+        border-color: rgba($black, 0.9) transparent transparent transparent;
+      }
+
+      .info {
+        // height: 0;
+        position: absolute;
+        right: -30%;
+        top: -64px;
+        opacity: 0;
+        @include transition;
+        // font-size: 0.8em;
+        width: 180px;
+        background: rgba($black, 0.9);
+        border-radius: $bor-rad;
+        padding: 2px;
+
+        .time {
+          color: $secondary-color;
+          margin: $dist-low;
+        }
+
+        img {
+          width: 16px;
+          margin: $dist-low;
+        }
+      }
+
+      &:hover {
+        overflow: visible;
+        .info,
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .time-stamp {
+    position: absolute;
+    top: -8px;
+    width: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .line {
+      height: 20px;
+      width: 2px;
+      @include transition($speed);
+    }
+    .text {
+      padding-top: $dist-middle;
+      font-weight: 600;
+      @include transition($speed);
+    }
+  }
+}

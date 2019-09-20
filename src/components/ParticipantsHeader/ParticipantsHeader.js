@@ -7,14 +7,14 @@ import mu from '../../images/manchester.png';
 import ju from '../../images/juventus.png';
 
 const ParticipantsHeader = () => {
-  const [now, setNow] = useState(new Date().getSeconds());
+  const [now, setNow] = useState(new Date().getMinutes());
 
   const percent = now / 60;
 
   let interval = null;
   if (!interval) {
     interval = setInterval(() => {
-      setNow(new Date().getSeconds());
+      setNow(new Date().getMinutes());
     }, 1000);
   }
 
@@ -28,7 +28,9 @@ const ParticipantsHeader = () => {
               <span>:</span>
               <span>1</span>
             </div>
-            <div className="time">{`${new Date().toLocaleTimeString()}`}</div>
+            <div className="time">{`${new Date()
+              .toLocaleTimeString()
+              .slice(3, 9)}`}</div>
           </Circle>
         </div>
         <div className="flex game-info">
