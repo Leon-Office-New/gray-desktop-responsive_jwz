@@ -47,13 +47,13 @@ const Game = props => {
         <div className="col play">
           <div className="flex">
             <img src={mu} alt="team1_logo" />
-            <span>Manchester United</span>
+            <span>מנצ'סטר יונייטד</span>
           </div>
           <div className="flex">
             <img src={ju} alt="team1_logo" />
-            <span>Manchester United</span>
+            <span>יובנטוס</span>
           </div>
-          <div className="flex draw">Draw</div>
+          <div className="flex draw">תיקו</div>
         </div>
         <div className="col market">
           <div className="flex odd">
@@ -167,7 +167,7 @@ const League = props => {
       <div className="flex soccer name">
         <img src={soccer} alt="sport-icon" />
         <img src={uefa} alt="league-icon" />
-        <span className="text">Soccer - UEFA Champions League</span>
+        <span className="text">כדורגל - ליגת האלופות</span>
       </div>
       <div className="games-list">
         {[1, 2].map((item, index) => {

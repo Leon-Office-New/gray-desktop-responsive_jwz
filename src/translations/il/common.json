@@ -132,16 +132,16 @@
   },
   "inPlayTable": {
     "header": {
-      "time": "Time",
-      "play": "Play",
+      "time": "דקה",
+      "play": "משחק",
       "markets": [
         {
-          "type": "Full Time",
-          "odds": ["Odds", "Under/Over", "1X2"]
+          "type": "משחק",
+          "odds": ["אסייתי", "אנדר אובר ", "1X2"]
         },
         {
-          "type": "Half Time",
-          "odds": ["Odds", "Under/Over", "1X2"]
+          "type": "מחצית",
+          "odds": ["אסייתי", "אנדר אובר", "1X2"]
         }
       ]
     }
