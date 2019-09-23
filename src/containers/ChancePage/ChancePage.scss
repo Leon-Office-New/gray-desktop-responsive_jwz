@@ -20,16 +20,14 @@
   .with-aside {
     margin-top: $dist-big;
     padding-bottom: $dist-very-big;
+    justify-content: space-between;
+    align-items: stretch;
 
     aside {
       width: 270px;
     }
     main {
       width: 1070px;
-
-      .leagues-selection {
-        margin-top: $dist-big;
-      }
     }
   }
 }

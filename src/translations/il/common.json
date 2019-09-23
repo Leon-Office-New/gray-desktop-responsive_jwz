@@ -178,5 +178,11 @@
         }
       ]
     }
+  },
+  "chanceBoard": {
+    "header": "סיכוי",
+    "board": {
+      "historyHeader": "History of the last 3 draws"
+    }
   }
 }
