@@ -47,7 +47,7 @@ const ChanceBoard = ({ t }) => {
 
   let cards = [];
   for (let i = 0; i < 4; i++) {
-    cards.push(<Card key={i} text={`Card ${i + 1}`} card={cards_images[i]} />);
+    cards.push(<Card key={i} text={`${i + 1} קלף`} card={cards_images[i]} />);
   }
 
   let historyItem = [];

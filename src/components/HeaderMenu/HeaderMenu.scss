@@ -14,7 +14,8 @@
       @include transition();
       cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &.active-link {
         color: $accent-color;
         border-bottom-color: $accent-color;
       }

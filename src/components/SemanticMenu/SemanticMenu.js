@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const SemanticMenu = props => {
   let { links, className } = props;
@@ -11,7 +11,9 @@ const SemanticMenu = props => {
         {links.map((item, index) => {
           return (
             <li key={index}>
-              <Link to={item.path}>{item.text}</Link>
+              <NavLink activeClassName="active-link" to={item.path}>
+                {item.text}
+              </NavLink>
             </li>
           );
         })}

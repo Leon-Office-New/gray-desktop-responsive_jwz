@@ -11,15 +11,15 @@
       },
       {
         "text": "קזינו חי",
-        "path": "/"
+        "path": "#"
       },
       {
         "text": "פוקר",
-        "path": "/"
+        "path": "#"
       },
       {
         "text": "הגרלה",
-        "path": "/"
+        "path": "#"
       },
       {
         "text": "סיכוי",
@@ -182,7 +182,7 @@
   "chanceBoard": {
     "header": "סיכוי",
     "board": {
-      "historyHeader": "History of the last 3 draws"
+      "historyHeader": "ההיסטוריה של שלושת הגרלות האחרונות"
     }
   }
 }
