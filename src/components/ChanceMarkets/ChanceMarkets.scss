@@ -24,15 +24,10 @@
       flex-basis: 22%;
       position: relative;
 
-      h2 {
-        // padding: $dist-middle 0;
-        // margin-bottom: $dist-middle;
-      }
-
       .card-icon {
         position: absolute;
         top: $dist-big;
-        left: $dist-big;
+        right: $dist-big;
       }
 
       .fas {
