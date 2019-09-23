@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="64px" viewBox="0 0 42 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>pike copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3.19999993,0 L38.8000001,0 C40.5673112,-7.68739003e-16 42,1.43268877 42,3.19999993 L42,60.8000001 C42,62.5673112 40.5673112,64 38.8000001,64 L3.19999993,64 C1.43268877,64 6.60522405e-16,62.5673112 0,60.8000001 L0,3.19999993 C-6.60522405e-16,1.43268877 1.43268877,7.68739003e-16 3.19999993,0 Z" id="path-1"></path>
+        <linearGradient x1="71.0625462%" y1="100%" x2="28.9374538%" y2="0%" id="linearGradient-3">
+            <stop stop-color="#CCCCCC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="52.9848927%"></stop>
+            <stop stop-color="#CCCCCC" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="0.646153846" y="0.64" width="40.7076923" height="62.72" rx="2.55999994"></rect>
+        <ellipse id="path-6" cx="40.5461538" cy="78.24" rx="51.8538462" ry="51.36"></ellipse>
+        <filter x="-11.1%" y="-16.1%" width="122.2%" height="122.4%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="-5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bet-Chance-Page-English-1" transform="translate(-758.000000, -642.000000)">
+            <g id="Group-14" transform="translate(455.000000, 176.000000)">
+                <g id="Group-11" transform="translate(45.000000, 61.000000)">
+                    <g id="Group-16" transform="translate(30.000000, 344.000000)">
+                        <g id="Group-16-Copy-2" transform="translate(73.000000, 61.000000)">
+                            <g id="Group-15">
+                                <g id="pike-copy" transform="translate(155.000000, 0.000000)">
+                                    <g id="Combined-Shape-+-spades-+-spades-copy-+-spades-copy-2-+-Rectangle-3-Mask">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <use id="Mask" fill="#CCCCCC" xlink:href="#path-1"></use>
+                                        <mask id="mask-5" fill="white">
+                                            <use xlink:href="#path-4"></use>
+                                        </mask>
+                                        <use id="Mask" fill="url(#linearGradient-3)" xlink:href="#path-4"></use>
+                                        <g id="spades" mask="url(#mask-5)" fill="#EC0000" fill-rule="nonzero">
+                                            <g transform="translate(20.838462, 31.840000) rotate(-180.000000) translate(-20.838462, -31.840000) translate(11.630769, 23.680000)" id="Shape">
+                                                <path d="M15.2389421,7.25225913 C11.3303749,4.38145035 9.98356768,2.08333968 9.06884446,0.304630611 C8.15412125,2.08333968 6.80723648,4.38148867 2.89866924,7.25225913 C-3.7655046,12.1471479 2.50740931,18.9796774 8.0226545,15.2191501 C8.72011447,14.6602631 9.06884446,14.2160766 9.06884446,13.8865907 C9.06879277,14.2092869 9.41745814,14.6534733 10.1148406,15.2191501 C15.630047,18.979754 21.9030772,12.1471479 15.2389421,7.25225913 Z"></path>
+                                            </g>
+                                        </g>
+                                        <g id="spades" mask="url(#mask-5)" fill="#EC0000" fill-rule="nonzero">
+                                            <g transform="translate(5.492308, 6.130526) rotate(-180.000000) translate(-5.492308, -6.130526) translate(2.907692, 3.840000)" id="Shape">
+                                                <path d="M4.2775978,2.03572186 C3.18045611,1.2298808 2.80240496,0.584797104 2.54564055,0.085510347 C2.28887614,0.584797104 1.91080322,1.22989156 0.81366154,2.03572186 C-1.05698375,3.40972572 0.703834193,5.32762874 2.25197319,4.27204212 C2.44775143,4.11516157 2.54564055,3.99047765 2.54564055,3.89799036 C2.54562604,3.98857175 2.64349702,4.11325567 2.8392535,4.27204212 C4.38738161,5.32765025 6.1482322,3.40972572 4.2775978,2.03572186 Z"></path>
+                                            </g>
+                                        </g>
+                                        <g id="spades-copy-3" mask="url(#mask-5)" fill="#EC0000" fill-rule="nonzero">
+                                            <g transform="translate(33.923077, 56.320000)" id="Shape">
+                                                <path d="M4.2775978,2.03572186 C3.18045611,1.2298808 2.80240496,0.584797104 2.54564055,0.085510347 C2.28887614,0.584797104 1.91080322,1.22989156 0.81366154,2.03572186 C-1.05698375,3.40972572 0.703834193,5.32762874 2.25197319,4.27204212 C2.44775143,4.11516157 2.54564055,3.99047765 2.54564055,3.89799036 C2.54562604,3.98857175 2.64349702,4.11325567 2.8392535,4.27204212 C4.38738161,5.32765025 6.1482322,3.40972572 4.2775978,2.03572186 Z"></path>
+                                            </g>
+                                        </g>
+                                        <g id="Oval" mask="url(#mask-5)">
+                                            <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                                            <use fill-opacity="0" fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-6"></use>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

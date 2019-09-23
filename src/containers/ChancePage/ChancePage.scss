@@ -1,0 +1,35 @@
+@import '../../variables';
+
+.chance-page {
+  .sports-nav {
+    ul {
+      max-width: 1370px;
+      margin-left: auto;
+      margin-right: auto;
+
+      li {
+        background-color: transparent;
+
+        &:hover {
+          background-color: $gray;
+        }
+      }
+    }
+  }
+
+  .with-aside {
+    margin-top: $dist-big;
+    padding-bottom: $dist-very-big;
+
+    aside {
+      width: 270px;
+    }
+    main {
+      width: 1070px;
+
+      .leagues-selection {
+        margin-top: $dist-big;
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@
 
     .sport {
       @include transition;
-      height: 33px;
+      height: 32px;
       overflow: hidden;
 
       &.is-open {
