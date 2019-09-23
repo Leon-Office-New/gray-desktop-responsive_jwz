@@ -1,6 +1,7 @@
 import React from 'react';
 import SportsMenu from '../../components/SportsMenu';
 import ChanceBoard from '../../components/ChanceBoard';
+import ChanceMarkets from '../../components/ChanceMarkets';
 
 import BetSlip from '../../components/BetSlip';
 import RelatedGames from '../../components/RelatedGames';
@@ -17,6 +18,7 @@ const ChancePage = () => {
         </aside>
         <main>
           <ChanceBoard />
+          <ChanceMarkets />
         </main>
       </div>
     </main>

@@ -1,0 +1,43 @@
+@import '../../variables';
+
+.chance-markets {
+  .total-markets {
+    justify-content: space-between;
+    align-items: stretch;
+
+    .market-component {
+      flex-basis: 48%;
+
+      .fas {
+        display: none;
+      }
+    }
+  }
+
+  .cards-markets {
+    margin-top: $dist-big;
+
+    justify-content: space-between;
+    align-items: stretch;
+
+    .card-market {
+      flex-basis: 22%;
+      position: relative;
+
+      h2 {
+        // padding: $dist-middle 0;
+        // margin-bottom: $dist-middle;
+      }
+
+      .card-icon {
+        position: absolute;
+        top: $dist-big;
+        left: $dist-big;
+      }
+
+      .fas {
+        display: none;
+      }
+    }
+  }
+}
