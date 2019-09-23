@@ -16,23 +16,24 @@ const Circle = ({ percent, children }) => {
     currentColor = scale(currentPercent).hex();
     if (currentPercent <= percent) {
       currentColor = gray;
-    }
-    const isFirst = currentColor !== gray && lastColor === gray;
-    if (isFirst) {
-      dotDeg = i;
-      dotColor = currentColor;
-    }
+    } else {
+      const isFirst = currentColor !== gray && lastColor === gray;
+      if (isFirst) {
+        dotDeg = i;
+        dotColor = currentColor;
+      }
 
-    lines.push(
-      <div
-        key={i}
-        className="line"
-        style={{
-          backgroundColor: currentColor,
-          transform: `rotate(${i}deg)`
-        }}
-      ></div>
-    );
+      lines.push(
+        <div
+          key={i}
+          className="line"
+          style={{
+            backgroundColor: currentColor,
+            transform: `rotate(${i}deg)`
+          }}
+        ></div>
+      );
+    }
   }
 
   // console.log('dot deg', dotDeg);
