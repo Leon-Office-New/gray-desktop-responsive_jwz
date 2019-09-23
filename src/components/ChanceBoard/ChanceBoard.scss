@@ -1,0 +1,94 @@
+@import '../../variables';
+
+.chance-board {
+  h1 {
+    @include section-header;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin-top: 0;
+  }
+
+  .board {
+    background-image: url(../../images/poker-table-background.svg);
+    background-size: cover;
+    background-position: center center;
+    height: 540px;
+    padding: $dist-very-big;
+
+    .cards {
+      justify-content: space-evenly;
+
+      .card {
+        .checkbox {
+          justify-content: center;
+
+          span {
+            padding: 0 $dist-middle;
+          }
+        }
+
+        .card-img {
+          position: relative;
+          margin: $dist-very-big;
+          cursor: pointer;
+
+          img {
+            width: 130px;
+            height: 200px;
+          }
+
+          .hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 200px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: $black;
+            opacity: 0.5;
+            @include transition;
+          }
+        }
+
+        &.selected {
+          .hover {
+            opacity: 0;
+          }
+        }
+
+        &:not(.selected) {
+          &:hover {
+            .hover {
+              opacity: 0.2;
+            }
+          }
+        }
+      }
+    }
+
+    .history {
+      h2 {
+        @include section-header;
+        font-size: 1.2em;
+        font-weight: normal;
+      }
+
+      .history-list {
+        justify-content: space-around;
+
+        .history-item {
+          font-size: 1.2em;
+          text-align: center;
+
+          .history-card {
+            margin: $dist-middle $dist-low;
+
+            .text {
+              margin-top: $dist-low;
+            }
+          }
+        }
+      }
+    }
+  }
+}
