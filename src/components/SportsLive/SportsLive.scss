@@ -14,20 +14,75 @@
     padding-bottom: $dist-middle;
 
     .sport {
-      padding: $dist-middle $dist-big;
+      @include transition;
+      height: 33px;
+      overflow: hidden;
+
+      &.is-open {
+        height: auto;
+      }
 
       &:not(:last-child) {
         border-bottom: 1px solid $gray;
       }
 
-      .count {
-        flex-basis: 10%;
-        margin-right: auto;
-        text-align: right;
+      .sport-content {
+        padding: $dist-middle $dist-big;
+
+        .count {
+          flex-basis: 10%;
+          margin-right: auto;
+          text-align: right;
+        }
+
+        .name {
+          cursor: pointer;
+        }
+
+        img {
+          margin-left: $dist-middle;
+        }
       }
 
-      img {
-        margin-left: $dist-middle;
+      .countries {
+        height: calc(100% - 33px);
+        background-color: $black;
+        margin: 0 2px;
+        padding: $dist-middle $dist-big;
+
+        .fas {
+          @include transition;
+          transform: rotateX(0deg);
+          padding-bottom: 5px;
+
+          &:hover {
+            color: $secondary-color;
+          }
+
+          &.is-up {
+            transform: rotateZ(180deg);
+          }
+        }
+
+        .countries-list {
+          .country {
+            &:not(:last-child) {
+              margin-bottom: $dist-middle;
+            }
+
+            .name {
+              padding: 0 $dist-middle;
+            }
+
+            .leagues {
+              padding: 0 $dist-very-big;
+
+              .league {
+                margin: $dist-middle 0;
+              }
+            }
+          }
+        }
       }
     }
   }
