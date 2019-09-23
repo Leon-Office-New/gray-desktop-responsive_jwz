@@ -89,13 +89,13 @@ const ChanceMarkets = () => {
     <section className="chance-markets">
       <div className="flex total-markets">
         {total_markets.map((item, index) => {
-          return <Market ket={index} market={item} />;
+          return <Market key={index} market={item} />;
         })}
       </div>
       <div className="flex cards-markets">
         {cards_markets.map((item, index) => {
           return (
-            <div className="card-market">
+            <div key={index} className="card-market">
               <Market market={item} />
               <img className="card-icon" src={item.icon} alt="type of card" />
             </div>

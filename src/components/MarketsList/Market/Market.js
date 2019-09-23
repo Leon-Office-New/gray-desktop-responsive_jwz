@@ -36,13 +36,13 @@ const Market = ({ market, three }) => {
               // className += ' with-border-side'
 
               return (
-                <>
-                  <li key={index} className={className}>
+                <React.Fragment key={index}>
+                  <li className={className}>
                     <span>{item.text}</span>
                     <BetItem>{item.value}</BetItem>
                   </li>
                   <li className="gray-line" />
-                </>
+                </React.Fragment>
               );
             }
 
