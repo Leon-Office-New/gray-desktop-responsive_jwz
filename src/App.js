@@ -8,6 +8,7 @@ import PrematchLeaguePage from './containers/PrematchLeaguePage';
 import InPlayPage from './containers/InPlayPage';
 import InPlayGamePage from './containers/InPlayGamePage';
 import ChancePage from './containers/ChancePage';
+import AccountPage from './containers/AccountPage';
 import Footer from './containers/Footer';
 import './App.scss';
 
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path="/in-play" component={InPlayPage} />
           <Route exact path="/in-play-game/:id" component={InPlayGamePage} />
           <Route exact path="/chance" component={ChancePage} />
+          <Route path="/account" component={AccountPage} />
         </Switch>
         <Footer />
       </div>

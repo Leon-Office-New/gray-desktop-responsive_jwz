@@ -1,0 +1,46 @@
+@import '../../variables';
+
+.account-status-bar {
+  justify-content: space-between;
+  margin: $dist-very-big 0;
+  .item {
+    flex-basis: 18%;
+    @include dark-gray-gradient;
+    text-align: center;
+
+    h3 {
+      @include section-header($red);
+      margin-top: 0;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    .text {
+      margin: $dist-very-big 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+      text-shadow: 1px 2px 1px $black;
+    }
+
+    &:nth-child(2) {
+      h3 {
+        @include section-header($dark-yellow);
+      }
+    }
+    &:nth-child(3) {
+      h3 {
+        @include section-header($white);
+      }
+    }
+    &:nth-child(4) {
+      h3 {
+        @include section-header($blue);
+      }
+    }
+    &:nth-child(5) {
+      h3 {
+        @include section-header($light-green);
+      }
+    }
+  }
+}
