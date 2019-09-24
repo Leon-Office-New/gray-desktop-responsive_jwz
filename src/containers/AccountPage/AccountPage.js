@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import AccountStatusBar from '../../components/AccountStatusBar';
 import AccountHistory from './AccountHistory';
+import './AccountPage.scss';
 
 const AccountPage = () => {
   return (

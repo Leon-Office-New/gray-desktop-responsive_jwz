@@ -17,8 +17,8 @@ const AccountStatusBar = ({ t }) => {
   const text = t('account', { returnObjects: true }).statusBar;
 
   const data = {
-    openTax: 1200,
-    open: 800,
+    openTax: 1,
+    open: 80,
     status: 'Active',
     balance: 438.16,
     totalDeposits: 12198.36

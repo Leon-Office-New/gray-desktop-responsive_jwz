@@ -1,4 +1,60 @@
 @import '../../../variables';
 
 .account-history {
+  @include dark-gray-gradient;
+  padding: $dist-middle;
+
+  h3 {
+    @include section-header;
+    font-weight: normal;
+    margin-top: 0;
+  }
+
+  .bet-types {
+    justify-content: center;
+    margin-bottom: $dist-big;
+
+    .type {
+      @include transition;
+      padding: $dist-middle;
+      border-bottom: 2px solid transparent;
+      margin: 0 $dist-middle;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        color: $secondary-color;
+        border-bottom-color: $secondary-color;
+      }
+    }
+  }
+
+  .table-header,
+  .row {
+    justify-content: space-between;
+    text-align: center;
+
+    .col {
+      height: 40px;
+      line-height: 40px;
+      background-color: $gray;
+      width: 5%;
+    }
+
+    .date {
+      width: 15%;
+    }
+    .sport {
+      width: 8%;
+    }
+  }
+
+  .row {
+    border-bottom: 1px solid $gray;
+    .col {
+      height: auto;
+      background-color: transparent;
+      text-align: right;
+    }
+  }
 }
