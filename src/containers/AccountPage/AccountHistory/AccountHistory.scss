@@ -3,6 +3,7 @@
 .account-history {
   @include dark-gray-gradient;
   padding: $dist-middle;
+  padding-bottom: $dist-very-big;
 
   h3 {
     @include section-header;
@@ -34,11 +35,19 @@
     justify-content: space-between;
     text-align: center;
 
+    .hyphen {
+      padding: 0 $dist-middle;
+    }
+
     .col {
       height: 40px;
       line-height: 40px;
       background-color: $gray;
       width: 5%;
+
+      img {
+        margin-left: $dist-middle;
+      }
     }
 
     .date {
@@ -46,15 +55,63 @@
     }
     .sport {
       width: 8%;
+      img {
+        width: 20px;
+      }
+    }
+    .country {
+      width: 17%;
+    }
+    .teams {
+      width: 21%;
+    }
+    .bet {
+      width: 8%;
+    }
+    .odds {
+      width: 14%;
     }
   }
 
   .row {
-    border-bottom: 1px solid $gray;
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray;
+    }
     .col {
       height: auto;
       background-color: transparent;
       text-align: right;
+      padding-left: $dist-low;
+      padding-right: $dist-low;
+
+      .pad {
+        margin-right: auto;
+      }
+    }
+
+    .date {
+      justify-content: space-between;
+
+      .live {
+        height: 24px;
+        line-height: 24px;
+        background-color: $red;
+        padding: 0 $dist-middle;
+        box-shadow: $little-shadow;
+      }
+    }
+
+    .bet,
+    .status,
+    .profit {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .bet-item {
+      height: 24px;
+      padding-left: 10px;
+      padding-right: $dist-low;
     }
   }
 }
