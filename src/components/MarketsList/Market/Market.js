@@ -39,7 +39,9 @@ const Market = ({ market, three }) => {
                 <React.Fragment key={index}>
                   <li className={className}>
                     <span>{item.text}</span>
-                    <BetItem>{item.value}</BetItem>
+                    <BetItem market={market} bet={item}>
+                      {Number(item.value).toFixed(2)}
+                    </BetItem>
                   </li>
                   <li className="gray-line" />
                 </React.Fragment>
@@ -49,7 +51,9 @@ const Market = ({ market, three }) => {
             return (
               <li key={index} className={className}>
                 <span>{item.text}</span>
-                <BetItem>{item.value}</BetItem>
+                <BetItem market={market} bet={item}>
+                  {Number(item.value).toFixed(2)}
+                </BetItem>
               </li>
             );
           })}

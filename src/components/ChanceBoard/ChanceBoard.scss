@@ -32,10 +32,10 @@
           margin: $dist-very-big;
           cursor: pointer;
 
-          img {
-            width: 130px;
-            height: 200px;
-          }
+          // img {
+          //   width: 130px;
+          //   height: 200px;
+          // }
 
           .hover {
             position: absolute;
@@ -47,6 +47,7 @@
             background-color: $black;
             opacity: 0.5;
             @include transition;
+            z-index: 3;
           }
         }
 
@@ -56,13 +57,13 @@
           }
         }
 
-        &:not(.selected) {
-          &:hover {
-            .hover {
-              opacity: 0.2;
-            }
+        // &:not(.selected) {
+        &:hover {
+          .hover {
+            opacity: 0.2;
           }
         }
+        // }
       }
     }
 

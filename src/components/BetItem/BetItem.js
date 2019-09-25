@@ -1,7 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import './BetItem.scss';
 
-const BetItem = ({ children, displayOnly }) => {
+import { addCardBet } from '../../redux/chance';
+
+const BetItem = ({ children, displayOnly, addCardBet, bet, market }) => {
   let className = 'bet-item';
   if (!displayOnly) {
     if (Math.random() > 0.5) {
@@ -11,7 +15,29 @@ const BetItem = ({ children, displayOnly }) => {
     }
   }
 
-  return <div className={className}>{children}</div>;
+  const onHandleClick = event => {
+    console.log(bet, market);
+    addCardBet(bet, market.type);
+  };
+
+  return (
+    <div className={className} onClick={onHandleClick}>
+      {children}
+    </div>
+  );
 };
 
-export default BetItem;
+const mapStateToProps = state => ({});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      addCardBet
+    },
+    dispatch
+  );
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BetItem);

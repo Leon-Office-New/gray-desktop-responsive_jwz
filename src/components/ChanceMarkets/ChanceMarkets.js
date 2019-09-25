@@ -1,11 +1,15 @@
 import React from 'react';
 import Market from '../MarketsList/Market';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import './ChanceMarkets.scss';
 
 import pike from '../../images/pike-circle.svg';
 import diamond from '../../images/diamond-circle.svg';
 import club from '../../images/club-circle.svg';
 import heart from '../../images/heart-circle.svg';
+
+import { addCardBet } from '../../redux/chance';
 
 const icons = [pike, diamond, club, heart];
 
@@ -38,51 +42,22 @@ const total_markets = [
   }
 ];
 
-const cardMarket = (header, icon) => {
+const cardMarket = (header, icon, bets, type) => {
   return {
     header,
     icon,
-    bets: [
-      {
-        text: '7',
-        value: 1.56
-      },
-      {
-        text: 'J',
-        value: 1.87
-      },
-      {
-        text: '8',
-        value: 1.56
-      },
-      {
-        text: 'Q',
-        value: 1.87
-      },
-      {
-        text: '9',
-        value: 1.56
-      },
-      {
-        text: 'K',
-        value: 1.87
-      },
-      {
-        text: '10',
-        value: 1.56
-      },
-      {
-        text: 'A',
-        value: 1.87
-      }
-    ]
+    bets,
+    type
   };
 };
 
-const ChanceMarkets = () => {
+const ChanceMarkets = ({ selectedCards, odds_of_cards }) => {
+  const cards_types = ['pike', 'diamond', 'club', 'heart'];
   let cards_markets = [];
   for (let i = 0; i < icons.length; i++) {
-    cards_markets.push(cardMarket(`${i + 1} קלף`, icons[i]));
+    cards_markets.push(
+      cardMarket(`${i + 1} קלף`, icons[i], odds_of_cards, cards_types[i])
+    );
   }
 
   return (
@@ -98,6 +73,7 @@ const ChanceMarkets = () => {
             <div key={index} className="card-market">
               <Market market={item} />
               <img className="card-icon" src={item.icon} alt="type of card" />
+              {!selectedCards.includes(item.type) && <div className="hover" />}
             </div>
           );
         })}
@@ -106,4 +82,21 @@ const ChanceMarkets = () => {
   );
 };
 
-export default ChanceMarkets;
+const mapStateToProps = state => ({
+  bets_of_cards: state.chance.bets_of_cards,
+  odds_of_cards: state.chance.odds_of_cards,
+  selectedCards: state.chance.selectedCards
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      addCardBet
+    },
+    dispatch
+  );
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ChanceMarkets);

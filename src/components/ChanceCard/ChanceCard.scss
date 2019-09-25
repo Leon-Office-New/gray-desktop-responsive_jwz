@@ -1,0 +1,80 @@
+@import '../../variables';
+
+.chance-card {
+  width: 130px;
+  height: 200px;
+  padding: $dist-middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  $very-light-gray: #cccccc;
+  background: linear-gradient(
+    -45deg,
+    $very-light-gray,
+    $white,
+    $very-light-gray
+  );
+  color: $black;
+  border-radius: 10px;
+  border: 2px solid $very-light-gray;
+
+  .left-top,
+  .right-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+
+    font-size: 1.2em;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .left-top {
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+
+  .right-bottom {
+    margin-left: auto;
+    margin-top: auto;
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    // height: 33%;
+    z-index: 1;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 140%;
+      height: 100%;
+      background-image: url(../../images/shadow-oval.svg);
+      background-position-y: 100%;
+      // background-position-x: 50%;
+      background-repeat: no-repeat;
+      // background-size: 400% 400%;
+      z-index: 2;
+      transform: rotate(12deg);
+    }
+  }
+}
