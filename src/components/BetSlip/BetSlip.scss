@@ -31,6 +31,12 @@
     }
   }
 
+  .empty-text {
+    text-align: center;
+    padding: $dist-big 0;
+    background-color: $black;
+  }
+
   .editable-bets-list {
     .editable-bet {
       padding: $dist-middle;
@@ -101,7 +107,7 @@
             flex-basis: 38%;
 
             input {
-              max-width: 86px;
+              width: 86px;
             }
           }
 
@@ -126,6 +132,62 @@
 
   .bets-options {
     padding: $dist-big;
+    font-size: 0.9em;
+
+    .accept-any-odds {
+      margin-bottom: $dist-big;
+      span {
+        padding: 0 $dist-low;
+      }
+    }
+
+    .single-options {
+      text-align: right;
+
+      .total-bets,
+      .total-risk,
+      .total-win {
+        justify-content: space-between;
+        span:first-child {
+          flex-basis: 60%;
+        }
+        span:last-child {
+          flex-basis: 38%;
+        }
+      }
+
+      .total-bets,
+      .total-risk,
+      .stake,
+      .total-win {
+        margin-bottom: $dist-big;
+      }
+
+      .stake,
+      .with-input {
+        justify-content: space-between;
+      }
+      .with-input {
+        flex-basis: 60%;
+      }
+      .value {
+        flex-basis: 38%;
+        input {
+          width: 86px;
+        }
+      }
+
+      .min-max {
+        font-size: 0.8em;
+        align-self: flex-end;
+
+        .flex {
+          span:first-child {
+            padding: 0 $dist-low;
+          }
+        }
+      }
+    }
 
     .buttons {
       justify-content: center;

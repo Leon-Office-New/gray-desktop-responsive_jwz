@@ -4,8 +4,16 @@ import { bindActionCreators } from 'redux';
 import './BetItem.scss';
 
 import { addCardBet } from '../../redux/chance';
+import { addBet, DEFAULT_BET } from '../../redux/bet_slip';
 
-const BetItem = ({ children, displayOnly, addCardBet, bet, market }) => {
+const BetItem = ({
+  children,
+  displayOnly,
+  addCardBet,
+  addBet,
+  bet,
+  market
+}) => {
   let className = 'bet-item';
   if (!displayOnly) {
     if (Math.random() > 0.5) {
@@ -16,8 +24,11 @@ const BetItem = ({ children, displayOnly, addCardBet, bet, market }) => {
   }
 
   const onHandleClick = event => {
-    console.log(bet, market);
-    addCardBet(bet, market.type);
+    if (market && market.type) {
+      addCardBet(bet, market.type);
+    } else {
+      addBet(DEFAULT_BET, children);
+    }
   };
 
   return (
@@ -32,7 +43,8 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      addCardBet
+      addCardBet,
+      addBet
     },
     dispatch
   );
