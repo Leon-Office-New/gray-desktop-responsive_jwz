@@ -21,8 +21,8 @@ const EditableBet = ({ text, bet, onHandleRemoveClick, onChange }) => {
         <img src={bet.category.icon} alt="sport-icon" />
         <span className="flex name">
           <span>{bet.category.name}</span>
-          <span style={{ padding: '0 4px' }}>-</span>
-          <span>{bet.event.name}</span>
+          {bet.event && <span style={{ padding: '0 4px' }}>-</span>}
+          {bet.event && <span>{bet.event.name}</span>}
         </span>
         <i
           className="fas fa-times"
@@ -31,23 +31,32 @@ const EditableBet = ({ text, bet, onHandleRemoveClick, onChange }) => {
       </div>
       <div className="flex teams">
         {bet.live && <span className="live">{text.live}</span>}
-        <span className="flex score">
-          <span>{bet.participants[0].score}</span>
-          <span>:</span>
-          <span>{bet.participants[1].score}</span>
-        </span>
-        <div className="flex names">
-          <span className="name">{bet.participants[0].name}</span>
-          <span className="secondary vs">VS</span>
-          <span className="name">{bet.participants[1].name}</span>
-        </div>
+        {Array.isArray(bet.participants) && (
+          <span className="flex score">
+            <span>{bet.participants[0].score}</span>
+            <span>:</span>
+            <span>{bet.participants[1].score}</span>
+          </span>
+        )}
+        {Array.isArray(bet.participants) && (
+          <div className="flex names">
+            <span className="name">{bet.participants[0].name}</span>
+            <span className="secondary vs">VS</span>
+            <span className="name">{bet.participants[1].name}</span>
+          </div>
+        )}
       </div>
       <div className="flex secondary market">
         <span>{bet.market.name}</span>
       </div>
       <div className="info">
         <div className="flex string">
-          <span className="name">{bet.market.bet.name}</span>
+          <span className="flex name">
+            {bet.market.bet.icon && (
+              <img src={bet.market.bet.icon} alt="bet icon" />
+            )}
+            <span style={{ margin: '0 4px' }}>{bet.market.bet.name}</span>
+          </span>
           <span className="flex value">
             <span>{bet.market.bet.odds}</span>
             <span style={{ padding: '0 4px' }}>@</span>

@@ -1,7 +1,24 @@
+import cards_icon from '../images/poker-cards.svg';
+
 const ADD_CARD_BET = 'ADD_CARD_BET';
 const CARD_SELECTION = 'CARD_SELECTION';
 
-// export const TYPED
+export const DEFAULT_CARD_BET = {
+  id: Math.random(),
+  category: {
+    name: 'Cards',
+    icon: cards_icon
+  },
+  market: {
+    name: 'Cards Correct Score',
+    bet: {
+      name: 'A',
+      odds: 1
+    }
+  },
+  stake: 200,
+  toReturn: 0
+};
 
 const cards = ['7', 'J', '8', 'Q', '9', 'K', '10', 'A'];
 
@@ -9,7 +26,7 @@ const getOdds = () => {
   let odds = [];
   for (let i = 0; i < cards.length; i++) {
     odds.push({
-      id: i + 1,
+      id: i + 101,
       card: cards[i],
       text: cards[i],
       value: 1 + Math.random()

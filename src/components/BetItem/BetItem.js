@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import './BetItem.scss';
 
-import { addCardBet } from '../../redux/chance';
+import { addCardBet, DEFAULT_CARD_BET } from '../../redux/chance';
 import { addBet, DEFAULT_BET } from '../../redux/bet_slip';
 
 const BetItem = ({
@@ -24,8 +24,23 @@ const BetItem = ({
   }
 
   const onHandleClick = event => {
+    console.log(market, bet, DEFAULT_CARD_BET);
     if (market && market.type) {
       addCardBet(bet, market.type);
+      addBet(
+        {
+          ...DEFAULT_CARD_BET,
+          market: {
+            ...DEFAULT_CARD_BET.market,
+            bet: {
+              ...DEFAULT_CARD_BET.market.bet,
+              icon: market.icon,
+              name: bet.card
+            }
+          }
+        },
+        children
+      );
     } else {
       addBet(DEFAULT_BET, children);
     }

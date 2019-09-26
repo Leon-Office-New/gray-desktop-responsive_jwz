@@ -13,9 +13,9 @@ import { addCardBet } from '../../redux/chance';
 
 const icons = [pike, diamond, club, heart];
 
-const total_markets = [
+let total_markets = [
   {
-    header: 'TOTAL UNDER/OVER 21',
+    header: 'TOTAL UNDER/OVER',
     bets: [
       {
         text: 'Under',
@@ -58,6 +58,12 @@ const ChanceMarkets = ({ selectedCards, odds_of_cards }) => {
     cards_markets.push(
       cardMarket(`${i + 1} קלף`, icons[i], odds_of_cards, cards_types[i])
     );
+  }
+
+  if (selectedCards.length > 0) {
+    total_markets[0].header = `TOTAL UNDER/OVER ${10.5 * selectedCards.length}`;
+  } else {
+    total_markets[0].header = `TOTAL UNDER/OVER`;
   }
 
   return (
