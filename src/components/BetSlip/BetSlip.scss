@@ -39,18 +39,25 @@
 
   .editable-bets-list {
     .editable-bet {
+      position: relative;
+      overflow: hidden;
       padding: $dist-middle;
       font-size: 0.9em;
 
-      &:nth-child(odd) {
-        background-color: $black;
-      }
-
       .league {
+        @include transition;
         margin-bottom: $dist-low;
+
+        .name {
+          height: 16px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
 
         img {
           margin-left: $dist-low;
+          z-index: 2;
         }
         i {
           margin-right: auto;
@@ -62,6 +69,7 @@
       }
 
       .teams {
+        @include transition;
         border-bottom: 1px solid $gray;
 
         .live {
@@ -79,6 +87,10 @@
           .name {
             display: inline-block;
             flex-basis: 40%;
+            height: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             &:last-child {
               text-align: right;
@@ -87,6 +99,52 @@
           .vs {
             padding: 0 $dist-low;
           }
+        }
+      }
+
+      .selector {
+        position: absolute;
+        top: $dist-middle;
+        right: $dist-middle;
+        @include transition;
+        opacity: 0;
+        z-index: 1;
+      }
+
+      .hover {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        background-color: rgba($black, 0.6);
+        z-index: 3;
+        @include transition;
+        transform: translateY(100%);
+      }
+
+      &:nth-child(odd) {
+        background-color: $black;
+        .hover {
+          background-color: rgba($gray, 0.4);
+        }
+      }
+
+      &.not-selected {
+        .hover {
+          transform: translateY(0);
+        }
+      }
+
+      &.has-checkbox {
+        .selector {
+          opacity: 1;
+          z-index: 4;
+        }
+
+        .league,
+        .teams {
+          padding-right: 20px;
         }
       }
 

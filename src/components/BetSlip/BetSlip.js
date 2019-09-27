@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -16,7 +16,22 @@ const BetSlip = ({ t, bets, removeBet, removeAllBets, changeStakeOfBet }) => {
   const [tab, setTab] = useState(0);
   const [stake, setStake] = useState(200);
   const [totalWin, setTotalWin] = useState(stake * bets.length);
+  const [selectedBets, setSelectedBets] = useState(bets);
 
+  useEffect(() => {
+    setSelectedBets(bets);
+    return () => {
+      // cleanup
+    };
+  }, [bets]);
+
+  const changeSelected = bet => {
+    if (selectedBets.filter(item => item.id === bet.id).length > 0) {
+      setSelectedBets(selectedBets.filter(item => item.id !== bet.id));
+    } else {
+      setSelectedBets(selectedBets.concat(bet));
+    }
+  };
   // const bets = [2, 3, 4, 5];
   const onHandleRemoveClick = bet => {
     removeBet(bet.id);
@@ -33,6 +48,8 @@ const BetSlip = ({ t, bets, removeBet, removeAllBets, changeStakeOfBet }) => {
     }
     setTotalWin(total);
   };
+
+  console.table(selectedBets);
 
   return (
     <section className="bet-slip">
@@ -58,6 +75,8 @@ const BetSlip = ({ t, bets, removeBet, removeAllBets, changeStakeOfBet }) => {
                 bet={item}
                 onHandleRemoveClick={onHandleRemoveClick}
                 onChange={changeStakeOfBet}
+                hasCheckbox={tab > 0}
+                changeSelected={changeSelected}
               />
             );
           })}
@@ -71,7 +90,7 @@ const BetSlip = ({ t, bets, removeBet, removeAllBets, changeStakeOfBet }) => {
               : 'bets-options odd-length'
           }
         >
-          {bets.length > 1 && tab === 0 && (
+          {bets.length > 1 && (
             <div className="single-options">
               <div className="flex total-bets">
                 <span>{text.totalBets}</span>

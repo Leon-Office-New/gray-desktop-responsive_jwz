@@ -60,7 +60,7 @@ const ChanceBoard = ({
   const text = t('chanceBoard', { returnObjects: true });
   const cards_types = ['pike', 'diamond', 'club', 'heart'];
 
-  console.log(bets_of_cards, odds_of_cards);
+  // console.log(bets_of_cards, odds_of_cards);
 
   let cards = [];
   for (let i = 0; i < 4; i++) {
