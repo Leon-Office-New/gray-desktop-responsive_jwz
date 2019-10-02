@@ -4,6 +4,8 @@ import BetItem from '../BetItem';
 import './InPlayTable.scss';
 
 import soccer from '../../images/soccer-ball-variant.svg';
+import basketball from '../../images/basketball-ball.svg';
+import tennis from '../../images/tennis-ball.svg';
 import uefa from '../../images/european_flag.svg';
 
 import mu from '../../images/manchester.png';
@@ -161,13 +163,17 @@ const Game = props => {
   );
 };
 
-const League = props => {
+const League = ({ sport, league, sportIcon, leagueIcon, sportClassName }) => {
   return (
     <div className="league">
-      <div className="flex soccer name">
-        <img src={soccer} alt="sport-icon" />
-        <img src={uefa} alt="league-icon" />
-        <span className="text">כדורגל - ליגת האלופות</span>
+      <div className={`flex ${sportClassName} name`}>
+        <img src={sportIcon} alt="sport-icon" />
+        <img src={leagueIcon} alt="league-icon" />
+        <span className="flex text">
+          <span>{sport}</span>
+          <span style={{ padding: '0 4px' }}>-</span>
+          <span>{league}</span>
+        </span>
       </div>
       <div className="games-list">
         {[1, 2].map((item, index) => {
@@ -185,8 +191,41 @@ const InPlayTable = ({ t }) => {
     <section className="in-play-table">
       <Header text={text.header} />
       <div className="leagues-list">
-        {[2, 1].map((item, index) => {
-          return <League key={index} />;
+        {[2].map((item, index) => {
+          return (
+            <League
+              key={index}
+              sport={'כדורגל'}
+              sportIcon={soccer}
+              sportClassName={'soccer'}
+              league={'ליגת האלופות'}
+              leagueIcon={uefa}
+            />
+          );
+        })}
+        {[2].map((item, index) => {
+          return (
+            <League
+              key={index}
+              sport={'כדורסל'}
+              sportIcon={basketball}
+              sportClassName={'basketball'}
+              league={'ליגת האלופות'}
+              leagueIcon={uefa}
+            />
+          );
+        })}
+        {[2].map((item, index) => {
+          return (
+            <League
+              key={index}
+              sport={'טניס'}
+              sportIcon={tennis}
+              sportClassName={'tennis'}
+              league={'ליגת האלופות'}
+              leagueIcon={uefa}
+            />
+          );
         })}
       </div>
     </section>

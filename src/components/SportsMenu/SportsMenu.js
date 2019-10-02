@@ -16,8 +16,8 @@ import lotto_icon from '../../images/lotto_icon.svg';
 
 const icons = [
   soccer_icon,
-  tennis_icon,
   basketball_icon,
+  tennis_icon,
   roulette_icon,
   black_jack_icon,
   casino_icon,

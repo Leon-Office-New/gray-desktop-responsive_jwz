@@ -88,8 +88,8 @@ const LeaguesSelection = ({ t }) => {
       )}
       <h2 className="flex">
         <div className="flex sport">
-          <img src={tennis_icon} alt="sport_logo" />
-          <span className="name">{'טניס'}</span>
+          <img src={basketball_icon} alt="sport_logo" />
+          <span className="name">{'כדורסל'}</span>
         </div>
         <div className="text">{text.lineRunning}</div>
       </h2>
@@ -108,8 +108,8 @@ const LeaguesSelection = ({ t }) => {
       )}
       <h2 className="flex">
         <div className="flex sport">
-          <img src={basketball_icon} alt="sport_logo" />
-          <span className="name">{'כדורסל'}</span>
+          <img src={tennis_icon} alt="sport_logo" />
+          <span className="name">{'טניס'}</span>
         </div>
         <div className="text">{text.lineRunning}</div>
       </h2>
