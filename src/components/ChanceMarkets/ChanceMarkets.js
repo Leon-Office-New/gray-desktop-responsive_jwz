@@ -41,6 +41,34 @@ let total_markets = [
     ]
   }
 ];
+let total_markets_all = [
+  {
+    header: 'TOTAL UNDER/OVER 42',
+    bets: [
+      {
+        text: 'Under',
+        value: 1.56
+      },
+      {
+        text: 'Over',
+        value: 1.87
+      }
+    ]
+  },
+  {
+    header: 'TOTAL ODD/EVEN',
+    bets: [
+      {
+        text: 'Odd',
+        value: 2.15
+      },
+      {
+        text: 'Even',
+        value: 1.43
+      }
+    ]
+  }
+];
 
 const cardMarket = (header, icon, bets, type) => {
   return {
@@ -60,6 +88,8 @@ const ChanceMarkets = ({ selectedCards, odds_of_cards }) => {
     );
   }
 
+  // const total_markets_all = [...total_markets]
+
   if (selectedCards.length > 0) {
     total_markets[0].header = `TOTAL UNDER/OVER ${10.5 * selectedCards.length}`;
   } else {
@@ -69,10 +99,20 @@ const ChanceMarkets = ({ selectedCards, odds_of_cards }) => {
   return (
     <section className="chance-markets">
       <div className="flex total-markets">
-        {total_markets.map((item, index) => {
+        {total_markets_all.map((item, index) => {
           return <Market key={index} market={item} />;
         })}
       </div>
+      {selectedCards.length > 0 && (
+        <>
+          <br />
+          <div className="flex total-markets">
+            {total_markets.map((item, index) => {
+              return <Market key={index} market={item} />;
+            })}
+          </div>
+        </>
+      )}
       <div className="flex cards-markets">
         {cards_markets.map((item, index) => {
           return (
