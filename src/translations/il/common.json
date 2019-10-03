@@ -218,5 +218,31 @@
         "status": "סטטוס"
       }
     }
+  },
+  "settings": {
+    "languages": [
+      {
+        "shortText": "IL",
+        "key": "IL"
+      },
+      {
+        "shortText": "EN",
+        "key": "EN"
+      }
+    ],
+    "decimals": [
+      {
+        "name": "Fractional",
+        "key": "Fractional"
+      },
+      {
+        "name": "Decimal",
+        "key": "Decimal"
+      },
+      {
+        "name": "American",
+        "key": "American"
+      }
+    ]
   }
 }

@@ -6,12 +6,12 @@
   display: flex;
 
   .players-img {
-    width: 40%;
+    width: 30%;
   }
 
   .content {
     position: relative;
-    width: 60%;
+    width: 70%;
     z-index: 5;
     opacity: 1;
 
@@ -136,4 +136,6 @@
       }
     }
   }
+
+  zoom: 0.7;
 }

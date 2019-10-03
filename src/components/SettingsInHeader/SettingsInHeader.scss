@@ -1,0 +1,19 @@
+@import '../../variables';
+
+.settings-in-header {
+  width: 220px;
+  justify-content: space-between;
+
+  .current-time {
+    width: 60px;
+  }
+
+  select {
+    background-color: transparent;
+    color: $white;
+    outline: none;
+    border: none;
+
+    font-size: inherit;
+  }
+}

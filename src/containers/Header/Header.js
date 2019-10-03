@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../../components/Logo';
 import HeaderMenu from '../../components/HeaderMenu';
 import LoggedNav from '../../components/LoggedNav';
+import SettingsInHeader from '../../components/SettingsInHeader';
 import './Header.scss';
 
 const Header = () => {
@@ -12,6 +13,7 @@ const Header = () => {
           <Logo />
           <HeaderMenu />
           <LoggedNav />
+          <SettingsInHeader />
         </div>
       </div>
     </header>

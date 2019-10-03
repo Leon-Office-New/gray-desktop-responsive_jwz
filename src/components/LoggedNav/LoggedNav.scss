@@ -43,6 +43,7 @@
       position: relative;
       .dropdown {
         display: none;
+        z-index: 10;
         position: absolute;
         width: 240px;
         @include dark-gray-gradient;
@@ -50,10 +51,10 @@
         left: -125%;
         border-radius: $bor-rad;
         padding: $dist-middle $dist-big;
+        text-align: right;
 
         &-menu {
           position: relative;
-          text-align: right;
 
           a {
             display: inline-block;
@@ -89,18 +90,15 @@
   }
 
   .button {
-    padding: 3px 8px;
+    padding: $dist-low 0;
     background-color: transparent;
     color: inherit;
     font-size: inherit;
-    border: 1px solid;
-    border-radius: $bor-rad;
     @include transition();
 
     &:hover {
-      background-color: $white;
-      color: $black;
-      border-color: $white;
+      cursor: pointer;
+      color: $accent-color;
     }
 
     i {
