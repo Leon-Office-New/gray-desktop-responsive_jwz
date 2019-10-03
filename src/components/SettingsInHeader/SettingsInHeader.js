@@ -38,7 +38,6 @@ const SettingsInHeader = props => {
 
   return (
     <div className="flex settings-in-header">
-      <span className="current-time">{now}</span>
       <select
         value={selectedDecimal}
         onChange={e => selectDecimal(e.target.value)}
@@ -63,6 +62,7 @@ const SettingsInHeader = props => {
           );
         })}
       </select>
+      <span className="current-time">{now}</span>
     </div>
   );
 };
