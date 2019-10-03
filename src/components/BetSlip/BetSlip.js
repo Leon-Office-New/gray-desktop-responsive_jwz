@@ -49,21 +49,27 @@ const BetSlip = ({ t, bets, removeBet, removeAllBets, changeStakeOfBet }) => {
     setTotalWin(total);
   };
 
-  console.table(selectedBets);
+  // console.table(selectedBets);
 
   return (
     <section className="bet-slip">
       <h2>{text.header}</h2>
-      <ul className="flex tabs">
-        {text.tabs.map((item, index) => {
-          let className = tab === index ? 'tab active' : 'tab';
-          return (
-            <li key={index} className={className} onClick={() => setTab(index)}>
-              {item}
-            </li>
-          );
-        })}
-      </ul>
+      {bets.length > 0 && (
+        <ul className="flex tabs">
+          {text.tabs.map((item, index) => {
+            let className = tab === index ? 'tab active' : 'tab';
+            return (
+              <li
+                key={index}
+                className={className}
+                onClick={() => setTab(index)}
+              >
+                {item}
+              </li>
+            );
+          })}
+        </ul>
+      )}
       {bets.length === 0 && <div className="empty-text">{text.emptyList}</div>}
       {bets.length > 0 && (
         <ul className="editable-bets-list">
