@@ -147,11 +147,24 @@ const MarketsList = ({ t }) => {
         selected={marketsTypeId}
         onHandleClick={onHandleSelectType}
       />
-      <ul className="flex list">
-        {markets.map((item, index) => (
-          <Market key={index} market={item} three={item.bets.length === 3} />
-        ))}
-      </ul>
+      <div className="flex columns">
+        <ul className="flex list">
+          {markets.slice(0, markets.length / 2 + 1).map((item, index) => (
+            <Market key={index} market={item} three={item.bets.length === 3} />
+          ))}
+        </ul>
+        <ul className="flex list">
+          {markets
+            .slice(markets.length / 2 + 1, markets.length)
+            .map((item, index) => (
+              <Market
+                key={index}
+                market={item}
+                three={item.bets.length === 3}
+              />
+            ))}
+        </ul>
+      </div>
     </section>
   );
 };

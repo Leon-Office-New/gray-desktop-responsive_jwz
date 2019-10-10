@@ -254,7 +254,7 @@
         .odds {
           flex-basis: 20%;
           display: flex;
-          padding-bottom: $dist-low;
+          padding: 2px 0;
 
           .bet-item {
             flex-grow: 1;
