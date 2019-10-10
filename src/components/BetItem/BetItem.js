@@ -24,7 +24,6 @@ const BetItem = ({
   }
 
   const onHandleClick = event => {
-    // console.log(market, bet, DEFAULT_CARD_BET);
     if (market && market.type) {
       addCardBet(bet, market.type);
       addBet(
@@ -42,7 +41,25 @@ const BetItem = ({
         children
       );
     } else {
-      addBet(DEFAULT_BET, children);
+      console.log(market, bet, DEFAULT_BET);
+      if (market && bet) {
+        addBet(
+          {
+            ...DEFAULT_BET,
+            market: {
+              ...DEFAULT_BET.market,
+              name: market.header,
+              bet: {
+                ...DEFAULT_BET.market.bet,
+                name: bet.text
+              }
+            }
+          },
+          children
+        );
+      } else {
+        addBet(DEFAULT_BET, children);
+      }
     }
   };
 
