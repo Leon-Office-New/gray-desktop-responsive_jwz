@@ -40,6 +40,7 @@ const FeaturedMatches = props => {
   const text = props.t('featuredMatches', { returnObjects: true });
   const [slide, setSlide] = useState(0);
   const perSlide = 3;
+  console.log(window.innerWidth);
 
   let matches = [];
   for (let i = 0; i < 8; i++) {

@@ -183,7 +183,7 @@ const GamesTable = props => {
       <div className="table">
         <TableHeader />
         <Carousel
-          dragging={false}
+          dragging={true}
           vertical={true}
           renderCenterLeftControls={null}
           renderCenterRightControls={null}

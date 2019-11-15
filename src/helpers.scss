@@ -78,3 +78,12 @@
   background-color: $swamp-green;
   color: $white;
 }
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1370px;
+    margin-left: $dist-very-big;
+    margin-right: $dist-very-big;
+    height: 100%;
+  }
+}

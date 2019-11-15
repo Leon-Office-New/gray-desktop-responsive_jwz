@@ -12,6 +12,22 @@ import CasinoGames from '../../components/CasinoGames';
 import './HomePage.scss';
 
 export class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMainShown: true,
+      width: window.innerWidth
+    };
+  }
+
+  componentDidMount() {
+    if (this.state.width < 1300) {
+      this.setState({
+        isMainShown: false
+      });
+    }
+  }
+
   render() {
     return (
       <main className="home-page">
@@ -19,11 +35,15 @@ export class HomePage extends Component {
           <MainSlider />
           <SportsMenu />
           <div className="flex with-aside">
-            <aside>
-              <FastBet />
-              <LiveBet />
-              <CasinoGames />
-            </aside>
+            {this.state.isMainShown ? (
+              <aside>
+                <FastBet />
+                <LiveBet />
+                <CasinoGames />
+              </aside>
+            ) : (
+              ''
+            )}
             <main>
               <FeaturedMatches />
               <GamesTable header="משחקים מובילים בהפעלה" live={true} />

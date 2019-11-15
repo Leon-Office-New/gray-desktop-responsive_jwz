@@ -28,3 +28,34 @@
     }
   }
 }
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+  .home-page {
+    .with-aside {
+      margin-top: $dist-very-big;
+      padding-bottom: $dist-very-big;
+      justify-content: space-between;
+      align-items: stretch;
+      // flex-wrap: wrap;
+
+      aside {
+        width: 370px;
+
+        margin-left: $dist-very-big;
+
+        .live-bet,
+        .casino-games {
+          margin-top: $dist-very-big;
+        }
+      }
+      main {
+        min-width: 0;
+        width: 100%;
+
+        .games-table {
+          margin-top: $dist-very-big;
+        }
+      }
+    }
+  }
+}
